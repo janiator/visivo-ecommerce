@@ -1,40 +1,31 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Resources\Panel;
 
+use App\Models\Store;
+use Illuminate\Database\Eloquent\Builder;
+use Filament\Resources\Resource;
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Store;
-use Livewire\Component;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Filament\Resources\Resource;
-use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\Section;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\TextInput;
-use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\Panel\StoreResource\Pages;
 use App\Filament\Resources\Panel\StoreResource\RelationManagers;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
 
 class StoreResource extends Resource
 {
     protected static ?string $model = Store::class;
 
-    /**
-     * For tenant scoping, use the 'users' relationship.
-     *
-     * This tells Filament to check the users associated with the store,
-     * filtering the instances based on the currently authenticated user.
-     *
-     * @var string|null
-     */
-    protected static ?string $tenantOwnershipRelationshipName = 'users';
+    // Do not set tenantOwnershipRelationshipName here.
+    // That would force Filament to apply tenant scoping automatically.
+    // We are handling it conditionally via getEloquentQuery() instead.
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
     protected static ?int $navigationSort = 1;
-
     protected static ?string $navigationGroup = 'Admin';
 
     public static function getModelLabel(): string
@@ -52,7 +43,31 @@ class StoreResource extends Resource
         return __('crud.stores.collectionTitle');
     }
 
-    public static function form(Form $form): Form
+    /**
+     * Override the default query.
+     *
+     * For user id 1 (the super‑admin), return all stores.
+     * For others, limit the query to only those stores that are linked
+     * via the pivot table (store_user) to the authenticated user.
+     *
+     * @return Builder
+     */
+    public static function getEloquentQuery(): Builder
+    {
+        // Start with a base Eloquent query from the model
+        $query = Store::query();
+
+        if (auth()->check() && auth()->id() !== 1) {
+            // For non‑admin users, add a filtering condition on the pivot.
+            $query->whereHas('users', function (Builder $query): void {
+                $query->where('users.id', auth()->id());
+            });
+        }
+
+        return $query;
+    }
+
+    public static function form(Forms\Form $form): Forms\Form
     {
         return $form->schema([
             Section::make()->schema([
@@ -62,11 +77,8 @@ class StoreResource extends Resource
                         ->required()
                         ->string()
                         ->autofocus(),
-
                     TextInput::make('stripe_account_id')
-                        ->label(
-                            __('crud.stores.inputs.stripe_account_id.label')
-                        )
+                        ->label(__('crud.stores.inputs.stripe_account_id.label'))
                         ->nullable()
                         ->string(),
                 ]),
@@ -74,18 +86,15 @@ class StoreResource extends Resource
         ]);
     }
 
-    public static function table(Table $table): Table
+    public static function table(Tables\Table $table): Tables\Table
     {
         return $table
             ->poll('60s')
             ->columns([
-                TextColumn::make('name')->label(
-                    __('crud.stores.inputs.name.label')
-                ),
-
-                TextColumn::make('stripe_account_id')->label(
-                    __('crud.stores.inputs.stripe_account_id.label')
-                ),
+                TextColumn::make('name')
+                    ->label(__('crud.stores.inputs.name.label')),
+                TextColumn::make('stripe_account_id')
+                    ->label(__('crud.stores.inputs.stripe_account_id.label')),
             ])
             ->filters([])
             ->actions([
@@ -102,16 +111,18 @@ class StoreResource extends Resource
 
     public static function getRelations(): array
     {
-        return [RelationManagers\UsersRelationManager::class];
+        return [
+            RelationManagers\UsersRelationManager::class,
+        ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListStores::route('/'),
+            'index'  => Pages\ListStores::route('/'),
             'create' => Pages\CreateStore::route('/create'),
-            'view' => Pages\ViewStore::route('/{record}'),
-            'edit' => Pages\EditStore::route('/{record}/edit'),
+            'view'   => Pages\ViewStore::route('/{record}'),
+            'edit'   => Pages\EditStore::route('/{record}/edit'),
         ];
     }
 }

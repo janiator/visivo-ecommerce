@@ -12,13 +12,4 @@ class CollectionProduct extends Model
     protected $table = 'collection_product';
 
     protected $guarded = [];
-
-    public function variants()
-    {
-        return $this->hasManyThrough(
-            ProductVariant::class,
-            Product::class,
-            'id'
-        );
-    }
 }

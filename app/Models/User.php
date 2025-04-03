@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
+use App\Models\Store;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasTenants;
 use Filament\Panel;
@@ -10,6 +13,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Collection;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class User extends Authenticatable implements FilamentUser, HasTenants
 {
@@ -21,24 +25,17 @@ class User extends Authenticatable implements FilamentUser, HasTenants
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $fillable = ['name', 'email', 'password'];
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ['password', 'remember_token'];
 
     /**
-     * Get the attributes that should be cast.
+     * Get the casts for the model.
      *
      * @return array<string, string>
      */
@@ -46,7 +43,7 @@ class User extends Authenticatable implements FilamentUser, HasTenants
     {
         return [
             'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            'password'          => 'hashed',
         ];
     }
 
@@ -55,47 +52,56 @@ class User extends Authenticatable implements FilamentUser, HasTenants
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function stores()
+    public function stores(): BelongsToMany
     {
         return $this->belongsToMany(Store::class)
+            ->using(StoreUser::class)
             ->withPivot(['role']);
     }
 
     /**
      * Determine if the user can access Filament.
-     * You can add extra logic here if you want to limit access.
      *
+     * @param \Filament\Panel $panel
      * @return bool
      */
     public function canAccessPanel(Panel $panel): bool
     {
-        // You can implement any custom logic here, e.g.:
-        // return $this->hasVerifiedEmail();
-        return true; // Or your own condition
+        return true;
     }
 
     /**
-     * Return a collection of tenants (stores) that this user has access to.
+     * Return a collection of stores (tenants) that the user has access to.
      *
-     * @param  \Filament\Panel  $panel
+     * For the super-admin (user ID 1), return all stores.
+     *
+     * @param \Filament\Panel $panel
      * @return \Illuminate\Support\Collection
      */
     public function getTenants(Panel $panel): Collection
     {
+        if ($this->getKey() === 1) {
+            // Super-admin: return all tenants, regardless of pivot data.
+            return Store::all();
+        }
+
         return $this->stores;
     }
 
     /**
-     * Ensure that the user cannot guess a store ID/slug
-     * for a store that they do not belong to.
+     * Check if the user can access a given store.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $tenant
+     * For the super-admin (user ID 1), always return true.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $tenant
      * @return bool
      */
     public function canAccessTenant(\Illuminate\Database\Eloquent\Model $tenant): bool
     {
-        return $this->stores()
-            ->whereKey($tenant->getKey())
-            ->exists();
+        if ($this->getKey() === 1) {
+            return true;
+        }
+
+        return $this->stores()->whereKey($tenant->getKey())->exists();
     }
 }

@@ -1,0 +1,9 @@
+{
+    "conflicts": [
+        {
+            "id": "7bc78808-3a91-403b-95ee-fe212e8d2c87",
+            "currentContent": "<?php\n\nnamespace App\\Filament\\Resources\\Panel\\ProductResource\\Pages;\n\nuse Filament\\Actions;\nuse Filament\\Resources\\Pages\\ListRecords;\nuse App\\Filament\\Resources\\Panel\\ProductResource;\nuse Filament\\Support\\Enums\\MaxWidth;\n\nclass ListProducts extends ListRecords\n{\n    protected static string $resource = ProductResource::class;\n\n    /**\n     * Customize the maximum width of the content.\n     */\n    public function getMaxContentWidth(): MaxWidth\n    {\n        return MaxWidth::Full;\n    }\n\n    protected function getHeaderActions(): array\n    {\n        return [Actions\\CreateAction::make()];\n    }\n}\n",
+            "newContent": "<?php\n\nnamespace App\\Filament\\Resources\\Panel\\ProductResource\\Pages;\n\nuse Filament\\Actions;\nuse Filament\\Resources\\Pages\\ListRecords;\nuse App\\Filament\\Resources\\Panel\\ProductResource;\n\nclass ListProducts extends ListRecords\n{\n    protected static string $resource = ProductResource::class;\n\n    protected function getHeaderActions(): array\n    {\n        return [Actions\\CreateAction::make()];\n    }\n}\n"
+        }
+    ]
+}

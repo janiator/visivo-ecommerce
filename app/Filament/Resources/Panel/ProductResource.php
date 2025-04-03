@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Panel;
 
+use App\Filament\Resources\Panel\ProductResource\RelationManagers\CollectionsRelationManager;
 use App\Models\Product;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -38,7 +39,7 @@ class ProductResource extends Resource
     // Navigation configuration.
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?int $navigationSort = 1;
-    protected static ?string $navigationGroup = 'Admin';
+    protected static ?string $navigationGroup = 'Butikk';
 
     /**
      * Labels used in the Filament UI.
@@ -69,7 +70,7 @@ class ProductResource extends Resource
             ->columns([
                 // Computed column displays the variant name.
                 // When using the "all" filter, it will use the joined field, otherwise fallback to the main variant.
-                Tables\Columns\TextColumn::make('variant_display')
+                Tables\Columns\TextColumn::make('name')
                     ->label(__('crud.products.inputs.name.label'))
                     ->getStateUsing(fn ($record): ?string => $record->variant_name ?? $record->mainVariant?->name),
                 Tables\Columns\TextColumn::make('status')
@@ -215,50 +216,7 @@ class ProductResource extends Resource
             ])->from('md'),
 
 
-            // Variants Section.
-            Forms\Components\Section::make(__('Product Variants'))
-                ->schema([
-                    Forms\Components\Repeater::make('variants')
-                        ->label(__('Variants'))
-                        ->relationship('variants')
-                        ->schema([
-                            Forms\Components\TextInput::make('name')
-                                ->label(__('crud.product_variants.inputs.name.label'))
-                                ->required()
-                                ->string(),
-                            Forms\Components\TextInput::make('price')
-                                ->label(__('crud.product_variants.inputs.price.label'))
-                                ->required()
-                                ->numeric()
-                                ->step(1),
-                            Forms\Components\TextInput::make('grouping_attribute')
-                                ->label(__('crud.product_variants.inputs.grouping_attribute.label'))
-                                ->nullable()
-                                ->string(),
-                            Forms\Components\TextInput::make('available_stock')
-                                ->label(__('crud.product_variants.inputs.available_stock.label'))
-                                ->numeric()
-                                ->required(),
-                            Forms\Components\TextInput::make('committed_stock')
-                                ->label(__('crud.product_variants.inputs.committed_stock.label'))
-                                ->numeric()
-                                ->required(),
-                            Forms\Components\TextInput::make('unavailable_stock')
-                                ->label(__('crud.product_variants.inputs.unavailable_stock.label'))
-                                ->numeric()
-                                ->required(),
-                            Forms\Components\TextInput::make('incoming_stock')
-                                ->label(__('crud.product_variants.inputs.incoming_stock.label'))
-                                ->numeric()
-                                ->required(),
-                            Forms\Components\SpatieMediaLibraryFileUpload::make('variant_image')
-                                ->collection('variant_images')
-                                ->disk('s3')
-                                ->label(__('crud.product_variants.inputs.main_image.label')),
-                        ])
-                        ->collapsible()
-                        ->columns(2),
-                ])->columns(1),
+
         ])->columns(1);
     }
 

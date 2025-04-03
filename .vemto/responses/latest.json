@@ -197,28 +197,31 @@
                         "collection_product"
                     ],
                     "changedTables": []
+                },
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_121038_002_drop_collection_product_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_07_121038_002_drop_collection_product_table.php",
+                    "migrationName": "2025_04_07_121038_002_drop_collection_product_table",
+                    "datePrefix": "2025_04_07",
+                    "fullPrefix": "2025_04_07_121038",
+                    "createdTables": [
+                        "collection_product"
+                    ],
+                    "changedTables": []
+                },
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_130758_001_create_collection_product_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_07_130758_001_create_collection_product_table.php",
+                    "migrationName": "2025_04_07_130758_001_create_collection_product_table",
+                    "datePrefix": "2025_04_07",
+                    "fullPrefix": "2025_04_07_130758",
+                    "createdTables": [
+                        "collection_product"
+                    ],
+                    "changedTables": []
                 }
             ],
             "columns": {
-                "id": {
-                    "name": "id",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 0,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": true,
-                    "autoIncrement": true,
-                    "isRawDefault": false,
-                    "options": []
-                },
                 "collection_id": {
                     "name": "collection_id",
                     "type": "integer",
@@ -229,7 +232,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 1,
+                    "order": 0,
                     "index": false,
                     "unique": false,
                     "nullable": false,
@@ -248,48 +251,10 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 2,
+                    "order": 1,
                     "index": false,
                     "unique": false,
                     "nullable": false,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "created_at": {
-                    "name": "created_at",
-                    "type": "dateTime",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 3,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "updated_at": {
-                    "name": "updated_at",
-                    "type": "dateTime",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 4,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
                     "unsigned": false,
                     "autoIncrement": false,
                     "isRawDefault": false,
@@ -631,83 +596,6 @@
                     "precision": null,
                     "scale": 0,
                     "order": 9,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                }
-            },
-            "indexes": []
-        },
-        "events": {
-            "name": "events",
-            "oldNames": [],
-            "migrations": [
-                {
-                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_03_31_093340_001_create_events_table.php",
-                    "relativePath": "\/database\/migrations\/2025_03_31_093340_001_create_events_table.php",
-                    "migrationName": "2025_03_31_093340_001_create_events_table",
-                    "datePrefix": "2025_03_31",
-                    "fullPrefix": "2025_03_31_093340",
-                    "createdTables": [
-                        "events"
-                    ],
-                    "changedTables": []
-                }
-            ],
-            "columns": {
-                "id": {
-                    "name": "id",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 0,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": true,
-                    "autoIncrement": true,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "created_at": {
-                    "name": "created_at",
-                    "type": "dateTime",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 1,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "updated_at": {
-                    "name": "updated_at",
-                    "type": "dateTime",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 2,
                     "index": false,
                     "unique": false,
                     "nullable": true,
@@ -1709,6 +1597,17 @@
                         "order_items"
                     ],
                     "changedTables": []
+                },
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_111325_002_update_order_items_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_07_111325_002_update_order_items_table.php",
+                    "migrationName": "2025_04_07_111325_002_update_order_items_table",
+                    "datePrefix": "2025_04_07",
+                    "fullPrefix": "2025_04_07_111325",
+                    "createdTables": [],
+                    "changedTables": [
+                        "order_items"
+                    ]
                 }
             ],
             "columns": {
@@ -2283,352 +2182,6 @@
                 }
             }
         },
-        "product_variants": {
-            "name": "product_variants",
-            "oldNames": [],
-            "migrations": [
-                {
-                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_03_28_150237_create_product_variants_table.php",
-                    "relativePath": "\/database\/migrations\/2025_03_28_150237_create_product_variants_table.php",
-                    "migrationName": "2025_03_28_150237_create_product_variants_table",
-                    "datePrefix": "2025_03_28",
-                    "fullPrefix": "2025_03_28_150237",
-                    "createdTables": [
-                        "product_variants"
-                    ],
-                    "changedTables": []
-                },
-                {
-                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_03_31_155509_update_product_variants.php",
-                    "relativePath": "\/database\/migrations\/2025_03_31_155509_update_product_variants.php",
-                    "migrationName": "2025_03_31_155509_update_product_variants",
-                    "datePrefix": "2025_03_31",
-                    "fullPrefix": "2025_03_31_155509",
-                    "createdTables": [],
-                    "changedTables": [
-                        "product_variants"
-                    ]
-                },
-                {
-                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_03_31_170419_add_stripe_product_id_to_product_variants_table.php",
-                    "relativePath": "\/database\/migrations\/2025_03_31_170419_add_stripe_product_id_to_product_variants_table.php",
-                    "migrationName": "2025_03_31_170419_add_stripe_product_id_to_product_variants_table",
-                    "datePrefix": "2025_03_31",
-                    "fullPrefix": "2025_03_31_170419",
-                    "createdTables": [],
-                    "changedTables": [
-                        "product_variants"
-                    ]
-                }
-            ],
-            "columns": {
-                "id": {
-                    "name": "id",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 0,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": true,
-                    "autoIncrement": true,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "product_id": {
-                    "name": "product_id",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 1,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "name": {
-                    "name": "name",
-                    "type": "string",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 2,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "price": {
-                    "name": "price",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 3,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "grouping_attribute": {
-                    "name": "grouping_attribute",
-                    "type": "string",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 4,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "short_description": {
-                    "name": "short_description",
-                    "type": "text",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 5,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "description": {
-                    "name": "description",
-                    "type": "text",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 6,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "metadata": {
-                    "name": "metadata",
-                    "type": "text",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 7,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "status": {
-                    "name": "status",
-                    "type": "string",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": "active",
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 8,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "created_at": {
-                    "name": "created_at",
-                    "type": "dateTime",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 9,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "updated_at": {
-                    "name": "updated_at",
-                    "type": "dateTime",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 10,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "available_stock": {
-                    "name": "available_stock",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": "0",
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 11,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "committed_stock": {
-                    "name": "committed_stock",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": "0",
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 12,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "unavailable_stock": {
-                    "name": "unavailable_stock",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": "0",
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 13,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "incoming_stock": {
-                    "name": "incoming_stock",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": "0",
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 14,
-                    "index": false,
-                    "unique": false,
-                    "nullable": false,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
-                "stripe_product_id": {
-                    "name": "stripe_product_id",
-                    "type": "string",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 15,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                }
-            },
-            "indexes": []
-        },
         "products": {
             "name": "products",
             "oldNames": [],
@@ -2661,6 +2214,28 @@
                     "migrationName": "2025_03_31_173102_add_deleted_at_to_products_table",
                     "datePrefix": "2025_03_31",
                     "fullPrefix": "2025_03_31_173102",
+                    "createdTables": [],
+                    "changedTables": [
+                        "products"
+                    ]
+                },
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_114506_002_update_products_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_07_114506_002_update_products_table.php",
+                    "migrationName": "2025_04_07_114506_002_update_products_table",
+                    "datePrefix": "2025_04_07",
+                    "fullPrefix": "2025_04_07_114506",
+                    "createdTables": [],
+                    "changedTables": [
+                        "products"
+                    ]
+                },
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_114656_001_update_products_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_07_114656_001_update_products_table.php",
+                    "migrationName": "2025_04_07_114656_001_update_products_table",
+                    "datePrefix": "2025_04_07",
+                    "fullPrefix": "2025_04_07_114656",
                     "createdTables": [],
                     "changedTables": [
                         "products"
@@ -2706,25 +2281,6 @@
                     "isRawDefault": false,
                     "options": []
                 },
-                "main_variant_id": {
-                    "name": "main_variant_id",
-                    "type": "integer",
-                    "total": null,
-                    "places": null,
-                    "length": null,
-                    "default": null,
-                    "comment": null,
-                    "precision": null,
-                    "scale": 0,
-                    "order": 2,
-                    "index": false,
-                    "unique": false,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "isRawDefault": false,
-                    "options": []
-                },
                 "status": {
                     "name": "status",
                     "type": "string",
@@ -2735,7 +2291,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 3,
+                    "order": 2,
                     "index": false,
                     "unique": false,
                     "nullable": false,
@@ -2754,7 +2310,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 4,
+                    "order": 3,
                     "index": false,
                     "unique": false,
                     "nullable": false,
@@ -2773,7 +2329,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 5,
+                    "order": 4,
                     "index": false,
                     "unique": false,
                     "nullable": true,
@@ -2792,7 +2348,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 6,
+                    "order": 5,
                     "index": false,
                     "unique": false,
                     "nullable": true,
@@ -2811,7 +2367,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 7,
+                    "order": 6,
                     "index": false,
                     "unique": false,
                     "nullable": true,
@@ -2830,7 +2386,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 8,
+                    "order": 7,
                     "index": false,
                     "unique": false,
                     "nullable": true,
@@ -2849,7 +2405,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 9,
+                    "order": 8,
                     "index": false,
                     "unique": false,
                     "nullable": true,
@@ -2868,7 +2424,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 10,
+                    "order": 9,
                     "index": false,
                     "unique": false,
                     "nullable": true,
@@ -2887,7 +2443,7 @@
                     "comment": null,
                     "precision": null,
                     "scale": 0,
-                    "order": 11,
+                    "order": 10,
                     "index": false,
                     "unique": false,
                     "nullable": true,
@@ -2899,6 +2455,25 @@
                 "deleted_at": {
                     "name": "deleted_at",
                     "type": "dateTime",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 11,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "metadata": {
+                    "name": "metadata",
+                    "type": "text",
                     "total": null,
                     "places": null,
                     "length": null,
@@ -3067,6 +2642,159 @@
                 }
             }
         },
+        "stock": {
+            "name": "stock",
+            "oldNames": [],
+            "migrations": [
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_114506_001_create_stock_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_07_114506_001_create_stock_table.php",
+                    "migrationName": "2025_04_07_114506_001_create_stock_table",
+                    "datePrefix": "2025_04_07",
+                    "fullPrefix": "2025_04_07_114506",
+                    "createdTables": [
+                        "stock"
+                    ],
+                    "changedTables": []
+                }
+            ],
+            "columns": {
+                "id": {
+                    "name": "id",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 0,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": true,
+                    "autoIncrement": true,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "available": {
+                    "name": "available",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": "0",
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 1,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "committed": {
+                    "name": "committed",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": "0",
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 2,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "unavailable": {
+                    "name": "unavailable",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": "0",
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 3,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "incoming": {
+                    "name": "incoming",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": "0",
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 4,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "created_at": {
+                    "name": "created_at",
+                    "type": "dateTime",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 5,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "updated_at": {
+                    "name": "updated_at",
+                    "type": "dateTime",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 6,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                }
+            },
+            "indexes": []
+        },
         "store_user": {
             "name": "store_user",
             "oldNames": [],
@@ -3077,6 +2805,28 @@
                     "migrationName": "2025_03_28_152704_001_create_store_user_table",
                     "datePrefix": "2025_03_28",
                     "fullPrefix": "2025_03_28_152704",
+                    "createdTables": [
+                        "store_user"
+                    ],
+                    "changedTables": []
+                },
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_121111_002_drop_store_user_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_07_121111_002_drop_store_user_table.php",
+                    "migrationName": "2025_04_07_121111_002_drop_store_user_table",
+                    "datePrefix": "2025_04_07",
+                    "fullPrefix": "2025_04_07_121111",
+                    "createdTables": [
+                        "store_user"
+                    ],
+                    "changedTables": []
+                },
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_123823_001_create_store_user_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_07_123823_001_create_store_user_table.php",
+                    "migrationName": "2025_04_07_123823_001_create_store_user_table",
+                    "datePrefix": "2025_04_07",
+                    "fullPrefix": "2025_04_07_123823",
                     "createdTables": [
                         "store_user"
                     ],
@@ -3142,7 +2892,21 @@
                     "options": []
                 }
             },
-            "indexes": []
+            "indexes": {
+                "": {
+                    "name": "",
+                    "columns": [
+                        "store_id",
+                        "user_id"
+                    ],
+                    "algorithm": null,
+                    "references": null,
+                    "on": null,
+                    "onDelete": null,
+                    "onUpdate": null,
+                    "type": "primary"
+                }
+            }
         },
         "stores": {
             "name": "stores",
@@ -3443,8 +3207,8 @@
             "namespace": "App\\Models",
             "path": "Models\/Collection.php",
             "allImports": [
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
-                "Illuminate\\Database\\Eloquent\\Model"
+                "Illuminate\\Database\\Eloquent\\Model",
+                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
             ],
             "parentClass": "Illuminate\\Database\\Eloquent\\Model",
             "interfaces": [],
@@ -3510,64 +3274,7 @@
                     "relatedModelName": "App\\Models\\Product",
                     "parentTableName": "collections",
                     "parentModelName": "App\\Models\\Collection",
-                    "method": "    public function products()\n    {\n        return $this->belongsToMany(Product::class, 'collection_product');\n    }\n",
-                    "withPivotColumns": false,
-                    "includedPivotColumns": []
-                }
-            ],
-            "methods": [],
-            "hasTimestamps": true,
-            "hasSoftDeletes": false,
-            "isAuthenticatable": false
-        },
-        {
-            "fileName": "CollectionProduct.php",
-            "name": "CollectionProduct",
-            "tableName": "collection_product",
-            "class": "App\\Models\\CollectionProduct",
-            "namespace": "App\\Models",
-            "path": "Models\/CollectionProduct.php",
-            "allImports": [
-                "Illuminate\\Database\\Eloquent\\Model",
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
-            ],
-            "parentClass": "Illuminate\\Database\\Eloquent\\Model",
-            "interfaces": [],
-            "traits": [
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
-            ],
-            "hasFillable": false,
-            "fillable": [],
-            "hasCasts": false,
-            "casts": [],
-            "hasGuarded": true,
-            "guarded": [],
-            "hasHidden": false,
-            "hidden": [],
-            "hasDates": false,
-            "dates": [],
-            "hasAppends": false,
-            "appends": [],
-            "relationships": [
-                {
-                    "name": "variants",
-                    "type": "HasManyThrough",
-                    "foreignKeyName": "product_id",
-                    "ownerKeyName": null,
-                    "foreignPivotKeyName": null,
-                    "relatedPivotKeyName": null,
-                    "parentKeyName": null,
-                    "relatedKeyName": null,
-                    "pivotTableName": null,
-                    "morphType": null,
-                    "localKeyName": "id",
-                    "firstKeyName": "id",
-                    "secondKeyName": null,
-                    "relatedTableName": "product_variants",
-                    "relatedModelName": "App\\Models\\ProductVariant",
-                    "parentTableName": "products",
-                    "parentModelName": "App\\Models\\Product",
-                    "method": "    public function variants()\n    {\n        return $this->hasManyThrough(\n            ProductVariant::class,\n            Product::class,\n            'id'\n        );\n    }\n",
+                    "method": "    public function products()\n    {\n        return $this->belongsToMany(Product::class);\n    }\n",
                     "withPivotColumns": false,
                     "includedPivotColumns": []
                 }
@@ -3653,64 +3360,6 @@
                     "parentTableName": "customers",
                     "parentModelName": "App\\Models\\Customer",
                     "method": "    public function orders(): HasMany\n    {\n        return $this->hasMany(Order::class);\n    }\n",
-                    "withPivotColumns": false,
-                    "includedPivotColumns": []
-                }
-            ],
-            "methods": [],
-            "hasTimestamps": true,
-            "hasSoftDeletes": false,
-            "isAuthenticatable": false
-        },
-        {
-            "fileName": "Event.php",
-            "name": "Event",
-            "tableName": "events",
-            "class": "App\\Models\\Event",
-            "namespace": "App\\Models",
-            "path": "Models\/Event.php",
-            "allImports": [
-                "Illuminate\\Database\\Eloquent\\Model",
-                "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
-            ],
-            "parentClass": "Illuminate\\Database\\Eloquent\\Model",
-            "interfaces": [],
-            "traits": [
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
-            ],
-            "hasFillable": false,
-            "fillable": [],
-            "hasCasts": false,
-            "casts": [],
-            "hasGuarded": true,
-            "guarded": [],
-            "hasHidden": false,
-            "hidden": [],
-            "hasDates": false,
-            "dates": [],
-            "hasAppends": false,
-            "appends": [],
-            "relationships": [
-                {
-                    "name": "tickets",
-                    "type": "HasManyThrough",
-                    "foreignKeyName": "product_id",
-                    "ownerKeyName": null,
-                    "foreignPivotKeyName": null,
-                    "relatedPivotKeyName": null,
-                    "parentKeyName": null,
-                    "relatedKeyName": null,
-                    "pivotTableName": null,
-                    "morphType": null,
-                    "localKeyName": "id",
-                    "firstKeyName": "id",
-                    "secondKeyName": null,
-                    "relatedTableName": "product_variants",
-                    "relatedModelName": "App\\Models\\ProductVariant",
-                    "parentTableName": "products",
-                    "parentModelName": "App\\Models\\Product",
-                    "method": "    public function tickets()\n    {\n        return $this->hasManyThrough(\n            ProductVariant::class,\n            Product::class,\n            'id'\n        );\n    }\n",
                     "withPivotColumns": false,
                     "includedPivotColumns": []
                 }
@@ -3975,7 +3624,29 @@
                     "relatedModelName": "App\\Models\\Order",
                     "parentTableName": "order_items",
                     "parentModelName": "App\\Models\\OrderItem",
-                    "method": "    public function order(): BelongsTo\n    {\n        return $this->belongsTo(Order::class);\n    }\n",
+                    "method": "    public function order()\n    {\n        return $this->belongsTo(Order::class);\n    }\n",
+                    "withPivotColumns": false,
+                    "includedPivotColumns": []
+                },
+                {
+                    "name": "product",
+                    "type": "BelongsTo",
+                    "foreignKeyName": "product_id",
+                    "ownerKeyName": "id",
+                    "foreignPivotKeyName": null,
+                    "relatedPivotKeyName": null,
+                    "parentKeyName": null,
+                    "relatedKeyName": null,
+                    "pivotTableName": null,
+                    "morphType": null,
+                    "localKeyName": null,
+                    "firstKeyName": null,
+                    "secondKeyName": null,
+                    "relatedTableName": "products",
+                    "relatedModelName": "App\\Models\\Product",
+                    "parentTableName": "order_items",
+                    "parentModelName": "App\\Models\\OrderItem",
+                    "method": "    public function product()\n    {\n        return $this->belongsTo(Product::class);\n    }\n",
                     "withPivotColumns": false,
                     "includedPivotColumns": []
                 }
@@ -3993,12 +3664,12 @@
             "namespace": "App\\Models",
             "path": "Models\/Product.php",
             "allImports": [
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
-                "Illuminate\\Database\\Eloquent\\Model",
                 "App\\Models\\ProductVariant",
-                "Illuminate\\Database\\Eloquent\\SoftDeletes",
                 "Spatie\\MediaLibrary\\HasMedia",
-                "Spatie\\MediaLibrary\\InteractsWithMedia"
+                "Illuminate\\Database\\Eloquent\\Model",
+                "Spatie\\MediaLibrary\\InteractsWithMedia",
+                "Illuminate\\Database\\Eloquent\\SoftDeletes",
+                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
             ],
             "parentClass": "Illuminate\\Database\\Eloquent\\Model",
             "interfaces": [
@@ -4006,13 +3677,12 @@
             ],
             "traits": [
                 "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
-                "Spatie\\MediaLibrary\\InteractsWithMedia",
-                "Illuminate\\Database\\Eloquent\\SoftDeletes"
+                "Illuminate\\Database\\Eloquent\\SoftDeletes",
+                "Spatie\\MediaLibrary\\InteractsWithMedia"
             ],
             "hasFillable": true,
             "fillable": [
                 "store_id",
-                "main_variant_id",
                 "status",
                 "name",
                 "type",
@@ -4057,50 +3727,6 @@
                     "includedPivotColumns": []
                 },
                 {
-                    "name": "mainVariant",
-                    "type": "BelongsTo",
-                    "foreignKeyName": "main_variant_id",
-                    "ownerKeyName": "id",
-                    "foreignPivotKeyName": null,
-                    "relatedPivotKeyName": null,
-                    "parentKeyName": null,
-                    "relatedKeyName": null,
-                    "pivotTableName": null,
-                    "morphType": null,
-                    "localKeyName": null,
-                    "firstKeyName": null,
-                    "secondKeyName": null,
-                    "relatedTableName": "product_variants",
-                    "relatedModelName": "App\\Models\\ProductVariant",
-                    "parentTableName": "products",
-                    "parentModelName": "App\\Models\\Product",
-                    "method": "    public function mainVariant()\n    {\n        return $this->belongsTo(ProductVariant::class, 'main_variant_id');\n    }\n",
-                    "withPivotColumns": false,
-                    "includedPivotColumns": []
-                },
-                {
-                    "name": "variants",
-                    "type": "HasMany",
-                    "foreignKeyName": "product_id",
-                    "ownerKeyName": null,
-                    "foreignPivotKeyName": null,
-                    "relatedPivotKeyName": null,
-                    "parentKeyName": null,
-                    "relatedKeyName": null,
-                    "pivotTableName": null,
-                    "morphType": null,
-                    "localKeyName": "id",
-                    "firstKeyName": null,
-                    "secondKeyName": null,
-                    "relatedTableName": "product_variants",
-                    "relatedModelName": "App\\Models\\ProductVariant",
-                    "parentTableName": "products",
-                    "parentModelName": "App\\Models\\Product",
-                    "method": "    public function variants()\n    {\n        return $this->hasMany(ProductVariant::class);\n    }\n",
-                    "withPivotColumns": false,
-                    "includedPivotColumns": []
-                },
-                {
                     "name": "collections",
                     "type": "BelongsToMany",
                     "foreignKeyName": null,
@@ -4118,7 +3744,7 @@
                     "relatedModelName": "App\\Models\\Collection",
                     "parentTableName": "products",
                     "parentModelName": "App\\Models\\Product",
-                    "method": "    public function collections()\n    {\n        return $this->belongsToMany(Collection::class, 'collection_product');\n    }\n",
+                    "method": "    public function collections()\n    {\n        return $this->belongsToMany(Collection::class);\n    }\n",
                     "withPivotColumns": false,
                     "includedPivotColumns": []
                 }
@@ -4126,11 +3752,11 @@
             "methods": [
                 {
                     "name": "registerMediaCollections",
-                    "content": "    public function registerMediaCollections(): void\n    {\n        $this->addMediaCollection('main_images')\n            ->singleFile();\n\n        $this->addMediaCollection('gallery_images');\n    }\n"
+                    "content": "    public function registerMediaCollections(): void\n    {\n        $this->addMediaCollection('main_images')->singleFile();\n\n        $this->addMediaCollection('gallery_images');\n    }\n"
                 },
                 {
                     "name": "booted",
-                    "content": "    protected static function booted(): void\n    {\n        static::created(function (Product $product) {\n            \/\/ If the main variant hasn't been set, automatically create it.\n            if (!$product->main_variant_id) {\n                $variant = $product->variants()->create([\n                    'name'              => $product->name,\n                    'price'             => $product->price,\n                    'status'            => $product->status,\n                    'grouping_attribute'=> null,\n                    'metadata'          => [],\n                ]);\n\n                \/\/ Update the main_variant_id to reference the newly created variant.\n                $product->update(['main_variant_id' => $variant->id]);\n            }\n        });\n\n        \/\/ Delete associated variants when a product is deleted.\n        static::deleting(function (Product $product): void {\n            \/\/ Delete all associated product variants.\n            $product->variants()->delete();\n        });\n    }\n"
+                    "content": "    protected static function booted(): void\n    {\n        \/\/\n    }\n"
                 }
             ],
             "hasTimestamps": true,
@@ -4138,88 +3764,35 @@
             "isAuthenticatable": false
         },
         {
-            "fileName": "ProductVariant.php",
-            "name": "ProductVariant",
-            "tableName": "product_variants",
-            "class": "App\\Models\\ProductVariant",
+            "fileName": "Stock.php",
+            "name": "Stock",
+            "tableName": "stock",
+            "class": "App\\Models\\Stock",
             "namespace": "App\\Models",
-            "path": "Models\/ProductVariant.php",
+            "path": "Models\/Stock.php",
             "allImports": [
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
                 "Illuminate\\Database\\Eloquent\\Model",
-                "Spatie\\MediaLibrary\\HasMedia",
-                "Spatie\\MediaLibrary\\InteractsWithMedia"
+                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
             ],
             "parentClass": "Illuminate\\Database\\Eloquent\\Model",
-            "interfaces": [
-                "Spatie\\MediaLibrary\\HasMedia"
-            ],
+            "interfaces": [],
             "traits": [
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
-                "Spatie\\MediaLibrary\\InteractsWithMedia"
+                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
             ],
-            "hasFillable": true,
-            "fillable": [
-                "product_id",
-                "name",
-                "price",
-                "grouping_attribute",
-                "metadata",
-                "status",
-                "available_stock",
-                "committed_stock",
-                "unavailable_stock",
-                "incoming_stock",
-                "stripe_product_id"
-            ],
-            "hasCasts": true,
-            "casts": {
-                "metadata": "array"
-            },
-            "hasGuarded": false,
-            "guarded": [
-                "*"
-            ],
+            "hasFillable": false,
+            "fillable": [],
+            "hasCasts": false,
+            "casts": [],
+            "hasGuarded": true,
+            "guarded": [],
             "hasHidden": false,
             "hidden": [],
             "hasDates": false,
             "dates": [],
             "hasAppends": false,
             "appends": [],
-            "relationships": [
-                {
-                    "name": "product",
-                    "type": "BelongsTo",
-                    "foreignKeyName": "product_id",
-                    "ownerKeyName": "id",
-                    "foreignPivotKeyName": null,
-                    "relatedPivotKeyName": null,
-                    "parentKeyName": null,
-                    "relatedKeyName": null,
-                    "pivotTableName": null,
-                    "morphType": null,
-                    "localKeyName": null,
-                    "firstKeyName": null,
-                    "secondKeyName": null,
-                    "relatedTableName": "products",
-                    "relatedModelName": "App\\Models\\Product",
-                    "parentTableName": "product_variants",
-                    "parentModelName": "App\\Models\\ProductVariant",
-                    "method": "    public function product()\n    {\n        return $this->belongsTo(Product::class);\n    }\n",
-                    "withPivotColumns": false,
-                    "includedPivotColumns": []
-                }
-            ],
-            "methods": [
-                {
-                    "name": "getOnHandAttribute",
-                    "content": "    public function getOnHandAttribute(): int\n    {\n        return (int) $this->available_stock +\n            (int) $this->committed_stock +\n            (int) $this->unavailable_stock;\n    }\n"
-                },
-                {
-                    "name": "registerMediaCollections",
-                    "content": "    public function registerMediaCollections(): void\n    {\n        $this->addMediaCollection('variant_images')\n            ->singleFile();\n    }\n"
-                }
-            ],
+            "relationships": [],
+            "methods": [],
             "hasTimestamps": true,
             "hasSoftDeletes": false,
             "isAuthenticatable": false
@@ -4233,7 +3806,8 @@
             "path": "Models\/Store.php",
             "allImports": [
                 "Illuminate\\Database\\Eloquent\\Model",
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
+                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
+                "Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany"
             ],
             "parentClass": "Illuminate\\Database\\Eloquent\\Model",
             "interfaces": [],
@@ -4281,28 +3855,6 @@
                     "includedPivotColumns": []
                 },
                 {
-                    "name": "images",
-                    "type": "HasMany",
-                    "foreignKeyName": "store_id",
-                    "ownerKeyName": null,
-                    "foreignPivotKeyName": null,
-                    "relatedPivotKeyName": null,
-                    "parentKeyName": null,
-                    "relatedKeyName": null,
-                    "pivotTableName": null,
-                    "morphType": null,
-                    "localKeyName": "id",
-                    "firstKeyName": null,
-                    "secondKeyName": null,
-                    "relatedTableName": "images",
-                    "relatedModelName": "App\\Models\\Image",
-                    "parentTableName": "stores",
-                    "parentModelName": "App\\Models\\Store",
-                    "method": "    public function images()\n    {\n        return $this->hasMany(Image::class);\n    }\n",
-                    "withPivotColumns": false,
-                    "includedPivotColumns": []
-                },
-                {
                     "name": "collections",
                     "type": "HasMany",
                     "foreignKeyName": "store_id",
@@ -4342,7 +3894,7 @@
                     "relatedModelName": "App\\Models\\User",
                     "parentTableName": "stores",
                     "parentModelName": "App\\Models\\Store",
-                    "method": "    public function users()\n    {\n        return $this->belongsToMany(User::class)\n            ->withPivot(['role']);\n    }\n",
+                    "method": "    public function users(): BelongsToMany\n    {\n        return $this->belongsToMany(User::class)\n            ->using(StoreUser::class)\n            ->withPivot('role');\n    }\n",
                     "withPivotColumns": true,
                     "includedPivotColumns": [
                         "role"
@@ -4362,21 +3914,16 @@
             "namespace": "App\\Models",
             "path": "Models\/StoreUser.php",
             "allImports": [
-                "Illuminate\\Database\\Eloquent\\Model",
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
+                "Illuminate\\Database\\Eloquent\\Relations\\Pivot"
             ],
-            "parentClass": "Illuminate\\Database\\Eloquent\\Model",
+            "parentClass": "Illuminate\\Database\\Eloquent\\Relations\\Pivot",
             "interfaces": [],
-            "traits": [
-                "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
-            ],
-            "hasFillable": true,
-            "fillable": [
-                "role"
-            ],
+            "traits": [],
+            "hasFillable": false,
+            "fillable": [],
             "hasCasts": false,
             "casts": [],
-            "hasGuarded": true,
+            "hasGuarded": false,
             "guarded": [],
             "hasHidden": false,
             "hidden": [],
@@ -4386,7 +3933,7 @@
             "appends": [],
             "relationships": [],
             "methods": [],
-            "hasTimestamps": true,
+            "hasTimestamps": false,
             "hasSoftDeletes": false,
             "isAuthenticatable": false
         },
@@ -4398,6 +3945,7 @@
             "namespace": "App\\Models",
             "path": "Models\/User.php",
             "allImports": [
+                "App\\Models\\Store",
                 "Filament\\Models\\Contracts\\FilamentUser",
                 "Filament\\Models\\Contracts\\HasTenants",
                 "Filament\\Panel",
@@ -4405,7 +3953,8 @@
                 "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
                 "Illuminate\\Foundation\\Auth\\User as Authenticatable",
                 "Illuminate\\Notifications\\Notifiable",
-                "Illuminate\\Support\\Collection"
+                "Illuminate\\Support\\Collection",
+                "Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany"
             ],
             "parentClass": "Illuminate\\Foundation\\Auth\\User as Authenticatable",
             "interfaces": [
@@ -4459,7 +4008,7 @@
                     "relatedModelName": "App\\Models\\Store",
                     "parentTableName": "users",
                     "parentModelName": "App\\Models\\User",
-                    "method": "    public function stores()\n    {\n        return $this->belongsToMany(Store::class)\n            ->withPivot(['role']);\n    }\n",
+                    "method": "    public function stores(): BelongsToMany\n    {\n        return $this->belongsToMany(Store::class)\n            ->using(StoreUser::class)\n            ->withPivot(['role']);\n    }\n",
                     "withPivotColumns": true,
                     "includedPivotColumns": [
                         "role"
@@ -4469,15 +4018,15 @@
             "methods": [
                 {
                     "name": "canAccessPanel",
-                    "content": "    public function canAccessPanel(Panel $panel): bool\n    {\n        \/\/ You can implement any custom logic here, e.g.:\n        \/\/ return $this->hasVerifiedEmail();\n        return true; \/\/ Or your own condition\n    }\n"
+                    "content": "    public function canAccessPanel(Panel $panel): bool\n    {\n        return true;\n    }\n"
                 },
                 {
                     "name": "getTenants",
-                    "content": "    public function getTenants(Panel $panel): Collection\n    {\n        return $this->stores;\n    }\n"
+                    "content": "    public function getTenants(Panel $panel): Collection\n    {\n        if ($this->getKey() === 1) {\n            \/\/ Super-admin: return all tenants, regardless of pivot data.\n            return Store::all();\n        }\n\n        return $this->stores;\n    }\n"
                 },
                 {
                     "name": "canAccessTenant",
-                    "content": "    public function canAccessTenant(\\Illuminate\\Database\\Eloquent\\Model $tenant): bool\n    {\n        return $this->stores()\n            ->whereKey($tenant->getKey())\n            ->exists();\n    }\n"
+                    "content": "    public function canAccessTenant(\\Illuminate\\Database\\Eloquent\\Model $tenant): bool\n    {\n        if ($this->getKey() === 1) {\n            return true;\n        }\n\n        return $this->stores()->whereKey($tenant->getKey())->exists();\n    }\n"
                 }
             ],
             "hasTimestamps": true,

@@ -1,0 +1,9 @@
+{
+    "conflicts": [
+        {
+            "id": "b96ae106-c8f5-47ce-9d09-1dfd2f04ae54",
+            "currentContent": "<?php\n\nnamespace App\\Filament\\Resources\\Panel\\ProductResource\\Pages;\n\nuse Filament\\Actions;\nuse Filament\\Resources\\Pages\\EditRecord;\nuse App\\Filament\\Resources\\Panel\\ProductResource;\nuse Filament\\Support\\Enums\\MaxWidth;\n\nclass EditProduct extends EditRecord\n{\n    protected static string $resource = ProductResource::class;\n\n    /**\n     * Customize the maximum width of the content.\n     */\n//    public function getMaxContentWidth(): MaxWidth\n//    {\n//        return MaxWidth::Full;\n//    }\n\n    protected function getHeaderActions(): array\n    {\n        return [\n            $this->getSaveFormAction()->formId('form'),\n            Actions\\DeleteAction::make(),\n        ];\n    }\n}\n",
+            "newContent": "<?php\n\nnamespace App\\Filament\\Resources\\Panel\\ProductResource\\Pages;\n\nuse Filament\\Actions;\nuse Filament\\Resources\\Pages\\EditRecord;\nuse App\\Filament\\Resources\\Panel\\ProductResource;\n\nclass EditProduct extends EditRecord\n{\n    protected static string $resource = ProductResource::class;\n\n    protected function getHeaderActions(): array\n    {\n        return [Actions\\DeleteAction::make()];\n    }\n}\n"
+        }
+    ]
+}

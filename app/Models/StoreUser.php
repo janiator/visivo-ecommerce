@@ -1,17 +1,43 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class StoreUser extends Model
+/**
+ * Class StoreUser
+ *
+ * Custom pivot model for the store_user table.
+ */
+class StoreUser extends Pivot
 {
-    use HasFactory;
-
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
     protected $table = 'store_user';
 
-    protected $guarded = [];
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = false;
 
-    protected $fillable = ['role'];
+    /**
+     * The primary key type.
+     *
+     * @var string
+     */
+    protected $keyType = 'int';
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
 }

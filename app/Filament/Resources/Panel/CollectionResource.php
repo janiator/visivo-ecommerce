@@ -35,21 +35,21 @@ class CollectionResource extends Resource
 
     protected static ?int $navigationSort = 1;
 
-    protected static ?string $navigationGroup = 'Admin';
+    protected static ?string $navigationGroup = 'Butikk';
 
     public static function getModelLabel(): string
     {
-        return __('crud.collections.itemTitle');
+        return 'kolleksjon';
     }
 
     public static function getPluralModelLabel(): string
     {
-        return __('crud.collections.collectionTitle');
+        return 'kolleksjoner';
     }
 
     public static function getNavigationLabel(): string
     {
-        return __('crud.collections.collectionTitle');
+        return 'Kolleksjoner';
     }
 
     public static function form(Form $form): Form

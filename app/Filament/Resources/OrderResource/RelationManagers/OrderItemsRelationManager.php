@@ -76,13 +76,8 @@ class OrderItemsRelationManager extends RelationManager
 
         return $table
             ->columns([
-                TextColumn::make('product_id')->label(
-                    __('crud.orderItems.inputs.product_id.label')
-                ),
+                TextColumn::make('product.name'),
 
-                TextColumn::make('product_variant_id')->label(
-                    __('crud.orderItems.inputs.product_variant_id.label')
-                ),
 
                 TextColumn::make('quantity')->label(
                     __('crud.orderItems.inputs.quantity.label')
