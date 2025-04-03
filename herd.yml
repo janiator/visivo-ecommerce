@@ -1,0 +1,5 @@
+integrations:
+  forge:
+    nettbutikk.visivo.no:
+      server-id: 595685
+      site-id: 2671070
