@@ -23,6 +23,7 @@ class StoreResource extends Resource
     // Do not set tenantOwnershipRelationshipName here.
     // That would force Filament to apply tenant scoping automatically.
     // We are handling it conditionally via getEloquentQuery() instead.
+    protected static ?string $tenantOwnershipRelationshipName = 'store';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?int $navigationSort = 1;

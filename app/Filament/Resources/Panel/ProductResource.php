@@ -28,6 +28,7 @@ class ProductResource extends Resource
      */
     protected static ?string $model = Product::class;
 
+
     /**
      * Multi-tenancy: specify the relationship on the Product model that connects it to a store.
      * Since each product belongs to a single store via store_id, we set it to 'store'.

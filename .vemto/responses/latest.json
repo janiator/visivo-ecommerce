@@ -239,7 +239,21 @@
                     "options": []
                 }
             },
-            "indexes": []
+            "indexes": {
+                "": {
+                    "name": "",
+                    "columns": [
+                        "collection_id",
+                        "product_id"
+                    ],
+                    "algorithm": null,
+                    "references": null,
+                    "on": null,
+                    "onDelete": null,
+                    "onUpdate": null,
+                    "type": "primary"
+                }
+            }
         },
         "collections": {
             "name": "collections",
@@ -2207,6 +2221,17 @@
                     "changedTables": [
                         "products"
                     ]
+                },
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_114656_001_update_products_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_07_114656_001_update_products_table.php",
+                    "migrationName": "2025_04_07_114656_001_update_products_table",
+                    "datePrefix": "2025_04_07",
+                    "fullPrefix": "2025_04_07_114656",
+                    "createdTables": [],
+                    "changedTables": [
+                        "products"
+                    ]
                 }
             ],
             "columns": {
@@ -2452,6 +2477,25 @@
                     "index": false,
                     "unique": false,
                     "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "store_id": {
+                    "name": "store_id",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 13,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
                     "unsigned": false,
                     "autoIncrement": false,
                     "isRawDefault": false,
