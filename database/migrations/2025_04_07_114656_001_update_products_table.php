@@ -13,7 +13,6 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('main_variant_id');
 
             $table
                 ->foreign('store_id')
@@ -32,10 +31,6 @@ return new class extends Migration {
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table
-                ->integer('main_variant_id')
-                ->nullable()
-                ->after('store_id');
 
             $table->dropForeign('products_store_id_foreign');
         });
