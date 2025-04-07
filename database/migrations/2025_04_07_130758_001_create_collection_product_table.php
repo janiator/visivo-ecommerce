@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
-
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration {
     /**
@@ -12,24 +10,22 @@ return new class extends Migration {
      *
      * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('collection_product', function (Blueprint $table) {
-            $table->unsignedBigInteger('collection_id');
-            $table->unsignedBigInteger('product_id');
+            $table->integer('collection_id')->unsigned();
 
-            // Adding indexes
-            $table->index('collection_id');
-            $table->index('product_id');
+            $table->integer('product_id')->unsigned();
 
-            // Creating foreign key constraints
-            $table->foreign('collection_id')
+            $table
+                ->foreign('collection_id')
                 ->references('id')
                 ->on('collections')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('product_id')
+            $table
+                ->foreign('product_id')
                 ->references('id')
                 ->on('products')
                 ->onDelete('cascade')
@@ -42,7 +38,7 @@ return new class extends Migration {
      *
      * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('collection_product');
     }
