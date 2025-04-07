@@ -15,7 +15,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('collection_product', function (Blueprint $table) {
-            $table->unsignedBigInteger('collection_id');
+            $table->integer('collection_id');
             $table->unsignedBigInteger('product_id');
 
             // Define composite primary key
