@@ -2207,17 +2207,6 @@
                     "changedTables": [
                         "products"
                     ]
-                },
-                {
-                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_114656_001_update_products_table.php",
-                    "relativePath": "\/database\/migrations\/2025_04_07_114656_001_update_products_table.php",
-                    "migrationName": "2025_04_07_114656_001_update_products_table",
-                    "datePrefix": "2025_04_07",
-                    "fullPrefix": "2025_04_07_114656",
-                    "createdTables": [],
-                    "changedTables": [
-                        "products"
-                    ]
                 }
             ],
             "columns": {
@@ -2240,8 +2229,8 @@
                     "isRawDefault": false,
                     "options": []
                 },
-                "store_id": {
-                    "name": "store_id",
+                "main_variant_id": {
+                    "name": "main_variant_id",
                     "type": "integer",
                     "total": null,
                     "places": null,
@@ -2253,7 +2242,7 @@
                     "order": 1,
                     "index": false,
                     "unique": false,
-                    "nullable": false,
+                    "nullable": true,
                     "unsigned": false,
                     "autoIncrement": false,
                     "isRawDefault": false,
