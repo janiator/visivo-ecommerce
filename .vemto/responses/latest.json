@@ -188,28 +188,6 @@
             "oldNames": [],
             "migrations": [
                 {
-                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_03_28_150341_create_collection_product_table.php",
-                    "relativePath": "\/database\/migrations\/2025_03_28_150341_create_collection_product_table.php",
-                    "migrationName": "2025_03_28_150341_create_collection_product_table",
-                    "datePrefix": "2025_03_28",
-                    "fullPrefix": "2025_03_28_150341",
-                    "createdTables": [
-                        "collection_product"
-                    ],
-                    "changedTables": []
-                },
-                {
-                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_121038_002_drop_collection_product_table.php",
-                    "relativePath": "\/database\/migrations\/2025_04_07_121038_002_drop_collection_product_table.php",
-                    "migrationName": "2025_04_07_121038_002_drop_collection_product_table",
-                    "datePrefix": "2025_04_07",
-                    "fullPrefix": "2025_04_07_121038",
-                    "createdTables": [
-                        "collection_product"
-                    ],
-                    "changedTables": []
-                },
-                {
                     "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_130758_001_create_collection_product_table.php",
                     "relativePath": "\/database\/migrations\/2025_04_07_130758_001_create_collection_product_table.php",
                     "migrationName": "2025_04_07_130758_001_create_collection_product_table",
@@ -2799,28 +2777,6 @@
             "name": "store_user",
             "oldNames": [],
             "migrations": [
-                {
-                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_03_28_152704_001_create_store_user_table.php",
-                    "relativePath": "\/database\/migrations\/2025_03_28_152704_001_create_store_user_table.php",
-                    "migrationName": "2025_03_28_152704_001_create_store_user_table",
-                    "datePrefix": "2025_03_28",
-                    "fullPrefix": "2025_03_28_152704",
-                    "createdTables": [
-                        "store_user"
-                    ],
-                    "changedTables": []
-                },
-                {
-                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_121111_002_drop_store_user_table.php",
-                    "relativePath": "\/database\/migrations\/2025_04_07_121111_002_drop_store_user_table.php",
-                    "migrationName": "2025_04_07_121111_002_drop_store_user_table",
-                    "datePrefix": "2025_04_07",
-                    "fullPrefix": "2025_04_07_121111",
-                    "createdTables": [
-                        "store_user"
-                    ],
-                    "changedTables": []
-                },
                 {
                     "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_07_123823_001_create_store_user_table.php",
                     "relativePath": "\/database\/migrations\/2025_04_07_123823_001_create_store_user_table.php",
