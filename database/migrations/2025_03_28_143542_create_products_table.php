@@ -10,7 +10,6 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('store_id')->constrained()->cascadeOnDelete();
             $table->unsignedBigInteger('main_variant_id')->nullable(); // references product_variants.id
             $table->string('status')->default('draft');
             $table->string('name');

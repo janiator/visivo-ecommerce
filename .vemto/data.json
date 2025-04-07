@@ -5,7 +5,7 @@
                 "uuid": "a68a2907-6d21-4ca8-b55c-07dc942dae74",
                 "id": 1,
                 "createdAt": "2025-04-03 14:51:48",
-                "updatedAt": "2025-04-07 15:47:10",
+                "updatedAt": "2025-04-07 15:48:00",
                 "settings": {
                     "cssFramework": "tailwind",
                     "uiStarterKit": "other",
@@ -368,7 +368,7 @@
                 "vthemeCdn": "https://cdn.tailwindcss.com",
                 "connectionFinished": true,
                 "canIgnoreNextSchemaSourceChanges": false,
-                "lastReadSchemaDataHash": "9b10a627b61bd886863d2b1f1254265c",
+                "lastReadSchemaDataHash": "1ab3c0517e70159f28ca947428ffe401",
                 "currentSchemaError": null,
                 "currentSchemaErrorStack": null,
                 "filesQueueStatus": "idle",
