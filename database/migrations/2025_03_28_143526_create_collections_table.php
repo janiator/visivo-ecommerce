@@ -13,7 +13,7 @@ return new class extends Migration {
                 ->unsigned()
                 ->autoIncrement();
 
-            $table->integer('store_id');
+            $table->unsignedBigInteger('store_id');
 
             $table->string('name');
 
