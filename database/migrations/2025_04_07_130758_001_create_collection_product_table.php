@@ -13,9 +13,9 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('collection_product', function (Blueprint $table) {
-            $table->integer('collection_id')->unsigned();
+            $table->unsignedBigInteger('collection_id');
 
-            $table->integer('product_id')->unsigned();
+            $table->unsignedBigInteger('product_id');
 
             $table
                 ->foreign('collection_id')
