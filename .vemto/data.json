@@ -5,7 +5,7 @@
                 "uuid": "a68a2907-6d21-4ca8-b55c-07dc942dae74",
                 "id": 1,
                 "createdAt": "2025-04-03 14:51:48",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 15:47:10",
                 "settings": {
                     "cssFramework": "tailwind",
                     "uiStarterKit": "other",
@@ -25,7 +25,7 @@
                     "schemaReaderDbDatabase": "vemto_schema_reader",
                     "laravelVersion": "12.0"
                 },
-                "canShowSchemaSourceChangesAlert": false,
+                "canShowSchemaSourceChangesAlert": true,
                 "codeGenerationSettings": {
                     "models": true,
                     "factories": true,
@@ -368,7 +368,7 @@
                 "vthemeCdn": "https://cdn.tailwindcss.com",
                 "connectionFinished": true,
                 "canIgnoreNextSchemaSourceChanges": false,
-                "lastReadSchemaDataHash": "d7c0447d66cad0252f6e9305ad731756",
+                "lastReadSchemaDataHash": "9b10a627b61bd886863d2b1f1254265c",
                 "currentSchemaError": null,
                 "currentSchemaErrorStack": null,
                 "filesQueueStatus": "idle",
@@ -10405,13 +10405,13 @@
         "schema_sections": {
             "item_1": {
                 "name": "App",
-                "scrollX": 24396,
-                "scrollY": 24563,
+                "scrollX": 24369,
+                "scrollY": 24565,
                 "zoom": 80,
                 "projectId": 1,
                 "id": 1,
                 "createdAt": "2025-04-03 14:52:02",
-                "updatedAt": "2025-04-07 15:44:35"
+                "updatedAt": "2025-04-07 15:46:22"
             },
             "__tableData": {
                 "count": 2,
