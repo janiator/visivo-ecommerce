@@ -4,32 +4,69 @@ declare(strict_types=1);
 
 namespace App\Observers;
 
-use App\Models\Product;
 use App\Jobs\SyncStripeProductJob;
+use App\Models\Product;
 
-/**
- * Class ProductObserver
- */
 class ProductObserver
 {
+    /**
+     * Handle the Product "created" event.
+     *
+     * @param Product $product
+     * @return void
+     */
     public function created(Product $product): void
     {
-        // Dispatch the sync job only once on creation.
-        // The job can later update if needed.
-        SyncStripeProductJob::dispatch($product->id, 'created');
-    }
-
-    public function updated(Product $product): void
-    {
-        // Only dispatch the updated sync if the stripe_product_id is already set.
-        // This helps to avoid duplicating the creation process.
-        if (!empty($product->stripe_product_id)) {
-            SyncStripeProductJob::dispatch($product->id, 'updated');
+        if (!empty($product->store_id)) {
+            SyncStripeProductJob::dispatch(
+                $product->store_id,
+                $product->id,
+                'created'
+            );
         }
     }
 
+    /**
+     * Handle the Product "updated" event.
+     *
+     * Pass the previous price to the job so that it only archives
+     * and creates a new price if the price has actually changed.
+     *
+     * @param Product $product
+     * @return void
+     */
+    public function updated(Product $product): void
+    {
+        if (!empty($product->store_id)) {
+            // Check if the 'price' attribute was changed.
+            // If changed, pass the original price; otherwise pass the current price.
+            $previousPrice = $product->wasChanged('price')
+                ? $product->getOriginal('price')
+                : $product->price;
+
+            SyncStripeProductJob::dispatch(
+                $product->store_id,
+                $product->id,
+                'updated',
+                $previousPrice
+            );
+        }
+    }
+
+    /**
+     * Handle the Product "deleted" event.
+     *
+     * @param Product $product
+     * @return void
+     */
     public function deleted(Product $product): void
     {
-        SyncStripeProductJob::dispatch($product->id, 'deleted');
+        if (!empty($product->store_id)) {
+            SyncStripeProductJob::dispatch(
+                $product->store_id,
+                $product->id,
+                'deleted'
+            );
+        }
     }
 }

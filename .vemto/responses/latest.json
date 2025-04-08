@@ -2174,6 +2174,436 @@
                 }
             }
         },
+        "product_meta_keys": {
+            "name": "product_meta_keys",
+            "oldNames": [],
+            "migrations": [
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_08_150300_create_product_meta_keys_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_08_150300_create_product_meta_keys_table.php",
+                    "migrationName": "2025_04_08_150300_create_product_meta_keys_table",
+                    "datePrefix": "2025_04_08",
+                    "fullPrefix": "2025_04_08_150300",
+                    "createdTables": [
+                        "product_meta_keys"
+                    ],
+                    "changedTables": []
+                }
+            ],
+            "columns": {
+                "id": {
+                    "name": "id",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 0,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": true,
+                    "autoIncrement": true,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "store_id": {
+                    "name": "store_id",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 1,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "key": {
+                    "name": "key",
+                    "type": "string",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 2,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "data_type": {
+                    "name": "data_type",
+                    "type": "string",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": "string",
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 3,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "created_at": {
+                    "name": "created_at",
+                    "type": "dateTime",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 4,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "updated_at": {
+                    "name": "updated_at",
+                    "type": "dateTime",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 5,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                }
+            },
+            "indexes": {
+                "store_meta_key_unique": {
+                    "name": "store_meta_key_unique",
+                    "columns": [
+                        "store_id",
+                        "key"
+                    ],
+                    "algorithm": null,
+                    "references": null,
+                    "on": null,
+                    "onDelete": null,
+                    "onUpdate": null,
+                    "type": "unique"
+                }
+            }
+        },
+        "product_meta_values": {
+            "name": "product_meta_values",
+            "oldNames": [],
+            "migrations": [
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_08_150329_create_product_meta_values_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_08_150329_create_product_meta_values_table.php",
+                    "migrationName": "2025_04_08_150329_create_product_meta_values_table",
+                    "datePrefix": "2025_04_08",
+                    "fullPrefix": "2025_04_08_150329",
+                    "createdTables": [
+                        "product_meta_values"
+                    ],
+                    "changedTables": []
+                }
+            ],
+            "columns": {
+                "id": {
+                    "name": "id",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 0,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": true,
+                    "autoIncrement": true,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "product_id": {
+                    "name": "product_id",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 1,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "meta_key_id": {
+                    "name": "meta_key_id",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 2,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "value": {
+                    "name": "value",
+                    "type": "text",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 3,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "created_at": {
+                    "name": "created_at",
+                    "type": "dateTime",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 4,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "updated_at": {
+                    "name": "updated_at",
+                    "type": "dateTime",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 5,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                }
+            },
+            "indexes": {
+                "product_meta_unique": {
+                    "name": "product_meta_unique",
+                    "columns": [
+                        "product_id",
+                        "meta_key_id"
+                    ],
+                    "algorithm": null,
+                    "references": null,
+                    "on": null,
+                    "onDelete": null,
+                    "onUpdate": null,
+                    "type": "unique"
+                }
+            }
+        },
+        "product_stripe_price_archives": {
+            "name": "product_stripe_price_archives",
+            "oldNames": [],
+            "migrations": [
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_08_173524_create_product_stripe_price_archives_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_08_173524_create_product_stripe_price_archives_table.php",
+                    "migrationName": "2025_04_08_173524_create_product_stripe_price_archives_table",
+                    "datePrefix": "2025_04_08",
+                    "fullPrefix": "2025_04_08_173524",
+                    "createdTables": [
+                        "product_stripe_price_archives"
+                    ],
+                    "changedTables": []
+                }
+            ],
+            "columns": {
+                "id": {
+                    "name": "id",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 0,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": true,
+                    "autoIncrement": true,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "product_id": {
+                    "name": "product_id",
+                    "type": "integer",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 1,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "stripe_price_id": {
+                    "name": "stripe_price_id",
+                    "type": "string",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 2,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "archived_at": {
+                    "name": "archived_at",
+                    "type": "timestamp",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": "CURRENT_TIMESTAMP",
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 3,
+                    "index": false,
+                    "unique": false,
+                    "nullable": false,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "created_at": {
+                    "name": "created_at",
+                    "type": "dateTime",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 4,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "updated_at": {
+                    "name": "updated_at",
+                    "type": "dateTime",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 5,
+                    "index": false,
+                    "unique": false,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                }
+            },
+            "indexes": []
+        },
         "products": {
             "name": "products",
             "oldNames": [],
@@ -2239,6 +2669,17 @@
                     "migrationName": "2025_04_07_165911_001_update_products_table",
                     "datePrefix": "2025_04_07",
                     "fullPrefix": "2025_04_07_165911",
+                    "createdTables": [],
+                    "changedTables": [
+                        "products"
+                    ]
+                },
+                {
+                    "migration": "\/Users\/jan\/PhpstormProjects\/Visivo-ecommerce\/database\/migrations\/2025_04_08_173312_add_stripe_price_id_to_products_table.php",
+                    "relativePath": "\/database\/migrations\/2025_04_08_173312_add_stripe_price_id_to_products_table.php",
+                    "migrationName": "2025_04_08_173312_add_stripe_price_id_to_products_table",
+                    "datePrefix": "2025_04_08",
+                    "fullPrefix": "2025_04_08_173312",
                     "createdTables": [],
                     "changedTables": [
                         "products"
@@ -2544,6 +2985,25 @@
                     "order": 15,
                     "index": false,
                     "unique": true,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "isRawDefault": false,
+                    "options": []
+                },
+                "stripe_price_id": {
+                    "name": "stripe_price_id",
+                    "type": "string",
+                    "total": null,
+                    "places": null,
+                    "length": null,
+                    "default": null,
+                    "comment": null,
+                    "precision": null,
+                    "scale": 0,
+                    "order": 16,
+                    "index": false,
+                    "unique": false,
                     "nullable": true,
                     "unsigned": false,
                     "autoIncrement": false,
@@ -3247,10 +3707,12 @@
             "allImports": [
                 "App\\Models\\Product",
                 "App\\Models\\Store",
+                "Filament\\Facades\\Filament",
                 "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
                 "Illuminate\\Database\\Eloquent\\Model",
                 "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
-                "Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany"
+                "Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany",
+                "Illuminate\\Database\\Eloquent\\Builder as EloquentBuilder"
             ],
             "parentClass": "Illuminate\\Database\\Eloquent\\Model",
             "interfaces": [],
@@ -3321,7 +3783,12 @@
                     "includedPivotColumns": []
                 }
             ],
-            "methods": [],
+            "methods": [
+                {
+                    "name": "booted",
+                    "content": "    protected static function booted(): void\n    {\n        static::addGlobalScope('tenant', function (EloquentBuilder $builder): void {\n            if ($tenant = Filament::getTenant()) {\n                $builder->where('store_id', $tenant->id);\n            }\n        });\n    }\n"
+                }
+            ],
             "hasTimestamps": true,
             "hasSoftDeletes": false,
             "isAuthenticatable": false
@@ -3712,6 +4179,7 @@
                 "Illuminate\\Database\\Eloquent\\Model",
                 "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
                 "Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany",
+                "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
                 "Illuminate\\Database\\Eloquent\\SoftDeletes",
                 "Spatie\\MediaLibrary\\HasMedia",
                 "Spatie\\MediaLibrary\\InteractsWithMedia"
@@ -3733,7 +4201,8 @@
                 "type",
                 "description",
                 "price",
-                "stripe_product_id"
+                "stripe_product_id",
+                "stripe_price_id"
             ],
             "hasCasts": true,
             "casts": {
@@ -3793,6 +4262,28 @@
                     "method": "    public function collections(): BelongsToMany\n    {\n        return $this->belongsToMany(\n            Collection::class,\n            'collection_product',\n            'product_id',\n            'collection_id'\n        );\n    }\n",
                     "withPivotColumns": false,
                     "includedPivotColumns": []
+                },
+                {
+                    "name": "metaValues",
+                    "type": "HasMany",
+                    "foreignKeyName": "product_id",
+                    "ownerKeyName": null,
+                    "foreignPivotKeyName": null,
+                    "relatedPivotKeyName": null,
+                    "parentKeyName": null,
+                    "relatedKeyName": null,
+                    "pivotTableName": null,
+                    "morphType": null,
+                    "localKeyName": "id",
+                    "firstKeyName": null,
+                    "secondKeyName": null,
+                    "relatedTableName": "product_meta_values",
+                    "relatedModelName": "App\\Models\\ProductMetaValue",
+                    "parentTableName": "products",
+                    "parentModelName": "App\\Models\\Product",
+                    "method": "    public function metaValues(): HasMany\n    {\n        return $this->hasMany(ProductMetaValue::class);\n    }\n",
+                    "withPivotColumns": false,
+                    "includedPivotColumns": []
                 }
             ],
             "methods": [
@@ -3807,6 +4298,150 @@
             ],
             "hasTimestamps": true,
             "hasSoftDeletes": true,
+            "isAuthenticatable": false
+        },
+        {
+            "fileName": "ProductMetaKey.php",
+            "name": "ProductMetaKey",
+            "tableName": "product_meta_keys",
+            "class": "App\\Models\\ProductMetaKey",
+            "namespace": "App\\Models",
+            "path": "Models\/ProductMetaKey.php",
+            "allImports": [
+                "Illuminate\\Database\\Eloquent\\Model",
+                "Illuminate\\Database\\Eloquent\\Relations\\HasMany"
+            ],
+            "parentClass": "Illuminate\\Database\\Eloquent\\Model",
+            "interfaces": [],
+            "traits": [],
+            "hasFillable": true,
+            "fillable": [
+                "store_id",
+                "key",
+                "data_type"
+            ],
+            "hasCasts": false,
+            "casts": [],
+            "hasGuarded": false,
+            "guarded": [
+                "*"
+            ],
+            "hasHidden": false,
+            "hidden": [],
+            "hasDates": false,
+            "dates": [],
+            "hasAppends": false,
+            "appends": [],
+            "relationships": [
+                {
+                    "name": "metaValues",
+                    "type": "HasMany",
+                    "foreignKeyName": "meta_key_id",
+                    "ownerKeyName": null,
+                    "foreignPivotKeyName": null,
+                    "relatedPivotKeyName": null,
+                    "parentKeyName": null,
+                    "relatedKeyName": null,
+                    "pivotTableName": null,
+                    "morphType": null,
+                    "localKeyName": "id",
+                    "firstKeyName": null,
+                    "secondKeyName": null,
+                    "relatedTableName": "product_meta_values",
+                    "relatedModelName": "App\\Models\\ProductMetaValue",
+                    "parentTableName": "product_meta_keys",
+                    "parentModelName": "App\\Models\\ProductMetaKey",
+                    "method": "    public function metaValues(): HasMany\n    {\n        return $this->hasMany(ProductMetaValue::class, 'meta_key_id');\n    }\n",
+                    "withPivotColumns": false,
+                    "includedPivotColumns": []
+                }
+            ],
+            "methods": [],
+            "hasTimestamps": true,
+            "hasSoftDeletes": false,
+            "isAuthenticatable": false
+        },
+        {
+            "fileName": "ProductMetaValue.php",
+            "name": "ProductMetaValue",
+            "tableName": "product_meta_values",
+            "class": "App\\Models\\ProductMetaValue",
+            "namespace": "App\\Models",
+            "path": "Models\/ProductMetaValue.php",
+            "allImports": [
+                "Illuminate\\Database\\Eloquent\\Model",
+                "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo"
+            ],
+            "parentClass": "Illuminate\\Database\\Eloquent\\Model",
+            "interfaces": [],
+            "traits": [],
+            "hasFillable": true,
+            "fillable": [
+                "product_id",
+                "meta_key_id",
+                "value"
+            ],
+            "hasCasts": false,
+            "casts": [],
+            "hasGuarded": false,
+            "guarded": [
+                "*"
+            ],
+            "hasHidden": false,
+            "hidden": [],
+            "hasDates": false,
+            "dates": [],
+            "hasAppends": false,
+            "appends": [],
+            "relationships": [
+                {
+                    "name": "product",
+                    "type": "BelongsTo",
+                    "foreignKeyName": "product_id",
+                    "ownerKeyName": "id",
+                    "foreignPivotKeyName": null,
+                    "relatedPivotKeyName": null,
+                    "parentKeyName": null,
+                    "relatedKeyName": null,
+                    "pivotTableName": null,
+                    "morphType": null,
+                    "localKeyName": null,
+                    "firstKeyName": null,
+                    "secondKeyName": null,
+                    "relatedTableName": "products",
+                    "relatedModelName": "App\\Models\\Product",
+                    "parentTableName": "product_meta_values",
+                    "parentModelName": "App\\Models\\ProductMetaValue",
+                    "method": "    public function product(): BelongsTo\n    {\n        return $this->belongsTo(Product::class);\n    }\n",
+                    "withPivotColumns": false,
+                    "includedPivotColumns": []
+                },
+                {
+                    "name": "metaKey",
+                    "type": "BelongsTo",
+                    "foreignKeyName": "meta_key_id",
+                    "ownerKeyName": "id",
+                    "foreignPivotKeyName": null,
+                    "relatedPivotKeyName": null,
+                    "parentKeyName": null,
+                    "relatedKeyName": null,
+                    "pivotTableName": null,
+                    "morphType": null,
+                    "localKeyName": null,
+                    "firstKeyName": null,
+                    "secondKeyName": null,
+                    "relatedTableName": "product_meta_keys",
+                    "relatedModelName": "App\\Models\\ProductMetaKey",
+                    "parentTableName": "product_meta_values",
+                    "parentModelName": "App\\Models\\ProductMetaValue",
+                    "method": "    public function metaKey(): BelongsTo\n    {\n        return $this->belongsTo(ProductMetaKey::class, 'meta_key_id');\n    }\n",
+                    "withPivotColumns": false,
+                    "includedPivotColumns": []
+                }
+            ],
+            "methods": [],
+            "hasTimestamps": true,
+            "hasSoftDeletes": false,
             "isAuthenticatable": false
         },
         {

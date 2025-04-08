@@ -6,10 +6,12 @@ namespace App\Models;
 
 use App\Models\Product;
 use App\Models\Store;
+use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 
 class Collection extends Model
 {
@@ -54,4 +56,22 @@ class Collection extends Model
             'product_id'
         );
     }
+
+    /**
+     * Boot the model and add a global query scope for tenancy.
+     *
+     * This scope automatically filters collections by the current store (tenant) if one is set.
+     *
+     * @return void
+     */
+    protected static function booted(): void
+    {
+        static::addGlobalScope('tenant', function (EloquentBuilder $builder): void {
+            if ($tenant = Filament::getTenant()) {
+                $builder->where('store_id', $tenant->id);
+            }
+        });
+    }
+
+
 }

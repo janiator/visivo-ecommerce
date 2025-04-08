@@ -28,6 +28,20 @@ class CustomerResource extends Resource
      */
     protected static ?string $tenantOwnershipRelationshipName = 'store';
 
+    public static function getModelLabel(): string
+    {
+        return 'kunde';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'kunder';
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Kunder';
+    }
 
     public static function form(Form $form): Form
     {
@@ -36,18 +50,20 @@ class CustomerResource extends Resource
                 Forms\Components\Hidden::make('store_id')
                     ->default(fn () => optional(Filament::getTenant())->id),
                 Forms\Components\TextInput::make('name')
+                    ->label('Navn')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
+                    ->label('E-post')
                     ->email()
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone')
+                    ->label('Telefon')
                     ->tel()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('billing_address'),
-                Forms\Components\TextInput::make('shipping_address'),
                 Forms\Components\Toggle::make('guest')
+                    ->label('Gjest')
                     ->required(),
             ]);
     }
@@ -57,13 +73,22 @@ class CustomerResource extends Resource
         return $table
             ->columns([
 
+                Tables\Columns\TextColumn::make('id')
+                    ->label('#')
+                    ->searchable()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->label('Navn')
+                    ->searchable()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('email')
+                    ->label('E-post')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('phone')
+                    ->label('Telefon')
                     ->searchable(),
                 Tables\Columns\IconColumn::make('guest')
+                    ->label('Gjest')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -90,7 +115,8 @@ class CustomerResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            //TODO show customers orders
+            //TODO add customer stats panel
         ];
     }
 

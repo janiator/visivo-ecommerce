@@ -2,22 +2,22 @@
 
 namespace App\Filament\Resources\Panel;
 
-use Filament\Facades\Filament;
-use Filament\Forms;
-use Filament\Tables;
-use Livewire\Component;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
 use App\Models\Collection;
-use Filament\Resources\Resource;
+use Filament\Forms;
+use Filament\Forms\Form;
 use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Section;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\TextInput;
-use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Section;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\CheckboxColumn;
+use Illuminate\Database\Eloquent\Builder;
+use Livewire\Component;
+use Filament\Facades\Filament;
 use App\Filament\Resources\Panel\CollectionResource\Pages;
 use App\Filament\Resources\Panel\CollectionResource\RelationManagers;
 
@@ -33,9 +33,7 @@ class CollectionResource extends Resource
     protected static ?string $tenantOwnershipRelationshipName = 'store';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
     protected static ?int $navigationSort = 1;
-
     protected static ?string $navigationGroup = 'Butikk';
 
     public static function getModelLabel(): string
@@ -57,17 +55,17 @@ class CollectionResource extends Resource
     {
         return $form->schema([
             Section::make()->schema([
-                Grid::make(['default' => 1])->schema([
-                    Forms\Components\Hidden::make('store_id')
+                Grid::make([
+                    'default' => 1,
+                ])->schema([
+                    Hidden::make('store_id')
                         ->default(fn () => optional(Filament::getTenant())->id),
-
                     TextInput::make('name')
-                        ->label(__('crud.collections.inputs.name.label'))
+                        ->label('Navn')
                         ->required()
                         ->string(),
-
                     Checkbox::make('visible')
-                        ->label(__('crud.collections.inputs.visible.label'))
+                        ->label('Synlig')
                         ->rules(['boolean'])
                         ->required()
                         ->inline(),
@@ -81,15 +79,18 @@ class CollectionResource extends Resource
         return $table
             ->poll('60s')
             ->columns([
-                TextColumn::make('store.name')->label('Store'),
-
-                TextColumn::make('name')->label(
-                    __('crud.collections.inputs.name.label')
-                ),
-
-                CheckboxColumn::make('visible')->label(
-                    __('crud.collections.inputs.visible.label')
-                ),
+                TextColumn::make('name')
+                    ->label('Navn')
+                    ->searchable()
+                    ->sortable(),
+                // New column: count the number of products in the collection.
+                TextColumn::make('products_count')
+                    ->label('Antall produkter')
+                    ->counts('products')
+                    ->sortable(),
+                CheckboxColumn::make('visible')
+                    ->label('Synlig')
+                    ->sortable(),
             ])
             ->filters([])
             ->actions([
@@ -106,16 +107,18 @@ class CollectionResource extends Resource
 
     public static function getRelations(): array
     {
-        return [];
+        return [
+            RelationManagers\ProductsRelationManager::class,
+        ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCollections::route('/'),
+            'index'  => Pages\ListCollections::route('/'),
             'create' => Pages\CreateCollection::route('/create'),
-            'view' => Pages\ViewCollection::route('/{record}'),
-            'edit' => Pages\EditCollection::route('/{record}/edit'),
+            'view'   => Pages\ViewCollection::route('/{record}'),
+            'edit'   => Pages\EditCollection::route('/{record}/edit'),
         ];
     }
 }

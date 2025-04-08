@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -33,8 +34,14 @@ class Product extends Model implements HasMedia
         'description',
         'price',
         'stripe_product_id',
+        'stripe_price_id',  // Newly added stripe_price_id attribute.
     ];
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
     protected $casts = [
         'metadata' => 'array',
     ];
@@ -54,8 +61,7 @@ class Product extends Model implements HasMedia
      *
      * Note:
      * Uses the default pivot table name "collection_product" with "product_id"
-     * and "collection_id" as foreign keys. If your pivot table uses different names,
-     * specify them explicitly in the belongsToMany() method.
+     * and "collection_id" as foreign keys.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\App\Models\Collection>
      */
@@ -86,12 +92,22 @@ class Product extends Model implements HasMedia
     /**
      * The "booted" method of the model.
      *
-     * Hook into the model's booting process here if additional logic is required.
+     * Hook into the model's booting process if additional logic is required.
      *
      * @return void
      */
     protected static function booted(): void
     {
         // Additional boot logic.
+    }
+
+    /**
+     * Each product can have many meta values.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function metaValues(): HasMany
+    {
+        return $this->hasMany(ProductMetaValue::class);
     }
 }

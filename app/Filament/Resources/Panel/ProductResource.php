@@ -1,10 +1,15 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Filament\Resources\Panel;
 
 use App\Filament\Resources\Panel\ProductResource\Pages;
 use App\Models\Product;
+use App\Models\ProductMetaKey;
+use App\Models\Collection;
 use Filament\Forms;
+use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Actions\BulkActionGroup;
@@ -13,7 +18,6 @@ use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Table;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Fieldset;
@@ -39,33 +43,33 @@ class ProductResource extends Resource
      */
     protected static ?string $tenantOwnershipRelationshipName = 'store';
 
+    public static function getModelLabel(): string
+    {
+        return 'produkt';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'produkter';
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Produkter';
+    }
+
     // Navigation configuration.
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?int $navigationSort = 1;
     protected static ?string $navigationGroup = 'Butikk';
 
-    /**
-     * Labels used in the Filament UI.
-     */
-    public static function getModelLabel(): string
-    {
-        return __('crud.products.itemTitle');
-    }
 
-    public static function getPluralModelLabel(): string
-    {
-        return __('crud.products.collectionTitle');
-    }
 
-    public static function getNavigationLabel(): string
-    {
-        return __('crud.products.collectionTitle');
-    }
 
     /**
      * Define the table used to list products.
      */
-    public static function table(Table $table): Table
+    public static function table(\Filament\Tables\Table $table): \Filament\Tables\Table
     {
         return $table
             ->poll('60s') // Auto-refresh the table every 60 seconds.
@@ -74,38 +78,35 @@ class ProductResource extends Resource
                 ImageColumn::make('main_image')
                     ->label('')
                     ->getStateUsing(function (Product $record): ?string {
-                        // Assuming the image is stored in the 'main_image' collection;
-                        // adjust the collection name as needed.
+                        // Assuming the image is stored in the 'main_image' collection; adjust as needed.
                         return $record->getFirstMediaUrl('main_image');
                     })
-                    ->circular() // Optional: displays the image as a circular thumbnail.
+                    ->circular() // Optional: displays as a circular thumbnail.
                     ->height(50)
                     ->width(50),
                 // Status as colored tags.
-                BadgeColumn::make('status')
-                    ->label(__('crud.products.inputs.status.label'))
+                TextColumn::make('status')
+                    ->badge()
                     ->colors([
                         'success' => 'active',
                         'warning' => 'draft',
-                        'gray'  => 'archived',
+                        'gray' => 'archived',
                     ]),
-
                 TextColumn::make('name')
-                    ->label(__('crud.products.inputs.name.label')),
-
+                    ->label('Produktnavn')
+                    ->searchable(),
                 TextColumn::make('type')
-                    ->label(__('crud.products.inputs.type.label')),
-
+                    ->label(__('crud.products.inputs.type.label'))
+                    ->hidden(),
                 TextColumn::make('description')
-                    ->label(__('crud.products.inputs.description.label'))
+                    ->label('Beskrivelse')
                     ->formatStateUsing(fn (string $state): string => strip_tags($state))
                     ->limit(100),
-
                 TextColumn::make('price')
+                    ->label('Pris')
                     ->formatStateUsing(function ($state, $record): string {
-                        // If the order is in NOK, show as "kr {amount},-" else use currency symbols.
                         if ($record->currency === 'nok' || $record->currency === null) {
-                            return 'kr ' . number_format(((float)$state) / 100, 0) . ',-';
+                            return 'kr ' . number_format(((float) $state) / 100, 0) . ',-';
                         }
                         $currencySymbols = [
                             'USD' => '$',
@@ -113,8 +114,9 @@ class ProductResource extends Resource
                             'GBP' => '£',
                         ];
                         $symbol = $currencySymbols[$record->currency] ?? $record->currency . ' ';
-                        return $symbol . number_format(((float)$state) / 100, 2);
-                    }),
+                        return $symbol . number_format(((float) $state) / 100, 2);
+                    })
+                    ->sortable(),
             ])
             ->filters([
                 // Add any filters you need.
@@ -134,7 +136,7 @@ class ProductResource extends Resource
     /**
      * Define the form used for creating and editing products.
      */
-    public static function form(Forms\Form $form): Forms\Form
+    public static function form(Form $form): Form
     {
         return $form->schema([
             // Attach the current store using a hidden field.
@@ -143,7 +145,7 @@ class ProductResource extends Resource
 
             // Basic Details Section.
             Split::make([
-                Section::make(__('crud.products.section.details'))
+                Section::make('Detaljer')
                     ->schema([
                         // Grid wrapping general product info.
                         Forms\Components\Grid::make(['default' => 1])
@@ -152,7 +154,6 @@ class ProductResource extends Resource
                                     ->label(__('crud.products.inputs.name.label'))
                                     ->required()
                                     ->string(),
-
                                 Forms\Components\Select::make('type')
                                     ->label(__('crud.products.inputs.type.label'))
                                     ->options([
@@ -163,13 +164,11 @@ class ProductResource extends Resource
                                         'event' => 'Event',
                                     ])
                                     ->nullable(),
-
                                 Forms\Components\RichEditor::make('description')
                                     ->label(__('crud.products.inputs.description.label'))
                                     ->nullable()
                                     ->string()
                                     ->fileAttachmentsVisibility('public'),
-
                                 Forms\Components\TextInput::make('price')
                                     ->label(__('crud.products.inputs.price.label'))
                                     ->nullable()
@@ -178,7 +177,6 @@ class ProductResource extends Resource
                             ]),
                     ])
                     ->columns(1),
-
                 Group::make([
                     Section::make(__('crud.products.inputs.status.label'))
                         ->schema([
@@ -191,27 +189,24 @@ class ProductResource extends Resource
                                     'archived' => 'Archived',
                                 ]),
                         ]),
-
                     // Images Section.
                     Section::make(__('Bilder'))
                         ->schema([
                             Forms\Components\SpatieMediaLibraryFileUpload::make('main_image')
                                 ->collection('main_image')
                                 ->disk('s3')
-                                ->label(__('crud.products.inputs.main_image.label')),
-
+                                ->label('Hovedbilde'),
                             Forms\Components\SpatieMediaLibraryFileUpload::make('gallery_images')
                                 ->collection('gallery_images')
                                 ->disk('s3')
                                 ->multiple()
                                 ->maxFiles(10)
                                 ->nullable()
-                                ->label(__('crud.products.inputs.gallery_images.label')),
+                                ->label('Bildegalleri'),
                         ])
                         ->columns(1),
-
                     // Collections Relationship Section.
-                    Forms\Components\Section::make(__('Collections'))
+                    Section::make(__('Collections'))
                         ->description(__('Select the collections that this product belongs to.'))
                         ->schema([
                             Forms\Components\Select::make('collections')
@@ -220,13 +215,31 @@ class ProductResource extends Resource
                                 ->relationship('collections', 'name')
                                 ->preload(),
                         ]),
-                ])
-                    ->columns(1),
-            ])
-                ->grow(false)
+                    // Metadata Section using the new meta setup.
+                    Section::make(__('Metadata'))
+                        ->description(__('Define reusable metadata for this product.'))
+                        ->schema([
+                            KeyValue::make('meta_values')
+                                ->label('Metadata')
+                                ->afterStateHydrated(function (KeyValue $component, $state, ?Product $record): void {
+                                    $metaPairs = [];
+                                    if ($record !== null) {
+                                        if (!$record->relationLoaded('metaValues')) {
+                                            $record->load('metaValues.metaKey');
+                                        }
+                                        foreach ($record->metaValues as $metaValue) {
+                                            if ($metaValue->metaKey !== null && strpos($metaValue->metaKey->key, '_') !== 0) {
+                                                $metaPairs[$metaValue->metaKey->key] = $metaValue->value;
+                                            }
+                                        }
+                                    }
+                                    $component->state($metaPairs);
+                                }),
+                        ]),
+                ]),
+            ])->grow(false)
                 ->from('md'),
-        ])
-            ->columns(1);
+        ])->columns(1);
     }
 
     /**
@@ -243,10 +256,10 @@ class ProductResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListProducts::route('/'),
+            'index'  => Pages\ListProducts::route('/'),
             'create' => Pages\CreateProduct::route('/create'),
-            'view' => Pages\ViewProduct::route('/{record}'),
-            'edit' => Pages\EditProduct::route('/{record}/edit'),
+            'view'   => Pages\ViewProduct::route('/{record}'),
+            'edit'   => Pages\EditProduct::route('/{record}/edit'),
         ];
     }
 }

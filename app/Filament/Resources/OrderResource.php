@@ -11,6 +11,7 @@ use Filament\Forms\Components\Split;
 use Filament\Forms\Components\KeyValue;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 
 class OrderResource extends Resource
@@ -78,7 +79,6 @@ class OrderResource extends Resource
                                 ->required()
                                 ->string(),
 
-                            // Neat key/value display for metadata
                             KeyValue::make('metadata')
                                 ->label(__('crud.orders.inputs.metadata.label'))
                                 ->helperText('Legg inn tilleggsdata som nøkkel/verdi-par.'),
@@ -135,21 +135,32 @@ class OrderResource extends Resource
         return $table
             ->poll('60s')
             ->columns([
-                Tables\Columns\TextColumn::make('id'),
-                Tables\Columns\TextColumn::make('store.name')
-                    ->label('Store')
-                    ->hidden(),
+                Tables\Columns\TextColumn::make('id')
+                    ->searchable(),
+
+                TextColumn::make('status')
+                    ->badge()
+                    ->colors([
+                        'success' => 'complete',
+                        'warning' => 'open',
+                        'gray'  => 'expired',
+                    ]),
                 Tables\Columns\TextColumn::make('customer.name')
-                    ->label('Customer'),
-                Tables\Columns\TextColumn::make('status')
-                    ->label('Status'),
-                // Column showing count of ordered items
-                Tables\Columns\TextColumn::make('order_items_count')
-                    ->label('Antall produkter')
-                    ->counts('orderItems')
+                    ->label('Kundenavn')
+                ->searchable(),
+
+                TextColumn::make('customer.email')
+                    ->searchable()
+                    ->label('Epost'),
+                // Column showing sum of ordered quantity from orderItems.quantity
+                Tables\Columns\TextColumn::make('order_items_total_quantity')
+                    ->label('Produkter')
+                    ->getStateUsing(
+                        fn (Order $record): int => $record->orderItems->sum('quantity')
+                    )
                     ->sortable(),
                 Tables\Columns\TextColumn::make('total_amount')
-                    ->label(__('crud.orders.inputs.total_amount.label'))
+                    ->label('Beløp')
                     ->formatStateUsing(function ($state, $record): string {
                         if ($record->currency === 'nok') {
                             return 'kr ' . number_format(((float) $state) / 100, 0) . ',-';
@@ -162,12 +173,14 @@ class OrderResource extends Resource
                         $symbol = $currencySymbols[$record->currency] ?? $record->currency . ' ';
                         return $symbol . number_format(((float) $state) / 100, 2);
                     }),
-                Tables\Columns\TextColumn::make('shipping_address')
-                    ->label(__('crud.orders.inputs.shipping_address.label'))
-                    ->limit(255),
-                Tables\Columns\TextColumn::make('billing_address')
-                    ->label(__('crud.orders.inputs.billing_address.label'))
-                    ->limit(255),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 // Additional filters if needed.
