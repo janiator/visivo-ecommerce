@@ -5,6 +5,12 @@ use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 use App\Services\StripeOrderSyncService;
 
+use App\Models\Product;
+use App\Models\Store;
+use Illuminate\Support\Facades\Log;
+use Stripe\Exception\ApiErrorException;
+use Stripe\StripeClient;
+
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
@@ -24,31 +30,5 @@ Artisan::command('stripe:sync-orders {storeId?}', function (?int $storeId) {
     $this->info('Stripe orders synchronized successfully in ' . round(microtime(true) - $start, 2) . ' seconds.');
 })->purpose('Synchronize orders from Stripe. Optionally specify a store ID.');
 
-Artisan::command('stripe:sync-checkout-session {session_id} {--account=}', function ($session_id, $account) {
-    // Use the provided account id option or fallback to config value.
-    $accountId = $account ?: config('services.stripe.account');
-    if (!$accountId) {
-        $this->error("Account id is required either via the --account option or your configuration.");
-        return;
-    }
 
-    $this->info("Retrieving Checkout Session: {$session_id} for account: {$accountId}");
-
-    try {
-        // Resolve the CheckoutSessionService out of the container.
-        $checkoutSessionService = app(CheckoutSessionService::class);
-
-        $checkoutSession = $checkoutSessionService->getExpandedCheckoutSession(
-            $session_id,
-            $accountId,
-            function (string $msg): void {
-                $this->info($msg);
-            }
-        );
-
-        $this->info("Checkout Session retrieved successfully.");
-        $this->line(print_r($checkoutSession, true));
-    } catch (Exception $e) {
-        $this->error("Error: " . $e->getMessage());
-    }
-})->purpose('Retrieve a Stripe Checkout Session with customer and line_items expanded.');
+//Artisan::command('stripe:import-products {--store_id=}', function () { /* The code above */ })->purpose('Import products from Stripe to the local database');

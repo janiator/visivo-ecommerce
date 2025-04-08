@@ -1,15 +1,15 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
 use App\Models\Order;
 use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
+use Filament\Facades\Filament;
 use Filament\Forms;
+use Filament\Forms\Components\Split;
+use Filament\Forms\Components\KeyValue;
 use Filament\Resources\Resource;
-use Filament\Resources\Components\Tab;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -27,12 +27,12 @@ class OrderResource extends Resource
 
     public static function getModelLabel(): string
     {
-        return 'Bestilling';
+        return 'bestilling';
     }
 
     public static function getPluralModelLabel(): string
     {
-        return 'Bestillinger';
+        return 'bestillinger';
     }
 
     public static function getNavigationLabel(): string
@@ -42,54 +42,92 @@ class OrderResource extends Resource
 
     public static function form(Forms\Form $form): Forms\Form
     {
-        return $form->schema([
-            Forms\Components\Section::make()->schema([
-                Forms\Components\Grid::make(['default' => 1])->schema([
-                    // Store SELECT – hide store field later for multi-tenancy
-                    Forms\Components\Select::make('store_id')
-                        ->label('Store')
-                        ->required()
-                        ->relationship('store', 'name')
-                        ->searchable()
-                        ->preload()
-                        ->native(false),
-                    // Customer SELECT
-                    Forms\Components\Select::make('customer_id')
-                        ->label('Customer')
-                        ->nullable()
-                        ->relationship('customer', 'name')
-                        ->searchable()
-                        ->preload()
-                        ->native(false),
-                    Forms\Components\TextInput::make('stripe_order_id')
-                        ->label(__('crud.orders.inputs.stripe_order_id.label'))
-                        ->required()
-                        ->string()
-                        ->unique('orders', 'stripe_order_id', ignoreRecord: true),
-                    Forms\Components\TextInput::make('total_amount')
-                        ->label(__('crud.orders.inputs.total_amount.label'))
-                        ->required()
-                        ->numeric()
-                        ->step(1),
-                    Forms\Components\TextInput::make('currency')
-                        ->label(__('crud.orders.inputs.currency.label'))
-                        ->required()
-                        ->string(),
-                    Forms\Components\RichEditor::make('shipping_address')
-                        ->label(__('crud.orders.inputs.shipping_address.label'))
-                        ->nullable()
-                        ->fileAttachmentsVisibility('public'),
-                    Forms\Components\RichEditor::make('billing_address')
-                        ->label(__('crud.orders.inputs.billing_address.label'))
-                        ->nullable()
-                        ->fileAttachmentsVisibility('public'),
-                    Forms\Components\RichEditor::make('metadata')
-                        ->label(__('crud.orders.inputs.metadata.label'))
-                        ->nullable()
-                        ->fileAttachmentsVisibility('public'),
+        return $form
+            ->schema([
+                Forms\Components\Section::make()
+                    ->schema([
+                        Forms\Components\Grid::make([
+                            'default' => 1,
+                        ])->schema([
+                            Forms\Components\Hidden::make('store_id')
+                                ->default(fn () => optional(Filament::getTenant())->id),
+
+                            // Customer SELECT
+                            Forms\Components\Select::make('customer_id')
+                                ->label('Customer')
+                                ->nullable()
+                                ->relationship('customer', 'name')
+                                ->searchable()
+                                ->preload()
+                                ->native(false),
+
+                            Forms\Components\TextInput::make('stripe_order_id')
+                                ->label(__('crud.orders.inputs.stripe_order_id.label'))
+                                ->required()
+                                ->string()
+                                ->unique('orders', 'stripe_order_id', ignoreRecord: true),
+
+                            Forms\Components\TextInput::make('total_amount')
+                                ->label(__('crud.orders.inputs.total_amount.label'))
+                                ->required()
+                                ->numeric()
+                                ->step(1),
+
+                            Forms\Components\TextInput::make('currency')
+                                ->label(__('crud.orders.inputs.currency.label'))
+                                ->required()
+                                ->string(),
+
+                            // Neat key/value display for metadata
+                            KeyValue::make('metadata')
+                                ->label(__('crud.orders.inputs.metadata.label'))
+                                ->helperText('Legg inn tilleggsdata som nøkkel/verdi-par.'),
+                        ]),
+                    ]),
+                Split::make([
+                    Forms\Components\Section::make('Fakturaadresse')
+                        ->schema([
+                            Forms\Components\TextInput::make('billing_address.line1')
+                                ->label('Adresselinje 1')
+                                ->nullable(),
+                            Forms\Components\TextInput::make('billing_address.line2')
+                                ->label('Adresselinje 2')
+                                ->nullable(),
+                            Split::make([
+                                Forms\Components\TextInput::make('billing_address.postal_code')
+                                    ->label('Postnummer')
+                                    ->nullable(),
+                                Forms\Components\TextInput::make('billing_address.city')
+                                    ->label('By')
+                                    ->nullable(),
+                            ]),
+                            Forms\Components\TextInput::make('billing_address.country')
+                                ->label('Land')
+                                ->nullable(),
+                        ]),
+                    Forms\Components\Section::make('Fraktadresse')
+                        ->schema([
+                            Forms\Components\TextInput::make('shipping_address.line1')
+                                ->label('Adresselinje 1')
+                                ->nullable(),
+                            Forms\Components\TextInput::make('shipping_address.line2')
+                                ->label('Adresselinje 2')
+                                ->nullable(),
+                            Split::make([
+                                Forms\Components\TextInput::make('shipping_address.postal_code')
+                                    ->label('Postnummer')
+                                    ->nullable(),
+                                Forms\Components\TextInput::make('shipping_address.city')
+                                    ->label('By')
+                                    ->nullable(),
+                            ]),
+                            Forms\Components\TextInput::make('shipping_address.country')
+                                ->label('Land')
+                                ->nullable(),
+                        ]),
                 ]),
-            ]),
-        ]);
+            ])
+            ->columns(1);
     }
 
     public static function table(Tables\Table $table): Tables\Table
@@ -105,21 +143,24 @@ class OrderResource extends Resource
                     ->label('Customer'),
                 Tables\Columns\TextColumn::make('status')
                     ->label('Status'),
+                // Column showing count of ordered items
+                Tables\Columns\TextColumn::make('order_items_count')
+                    ->label('Antall produkter')
+                    ->counts('orderItems')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('total_amount')
                     ->label(__('crud.orders.inputs.total_amount.label'))
                     ->formatStateUsing(function ($state, $record): string {
-                        // If the order is in NOK, show as "kr {amount},-"
                         if ($record->currency === 'nok') {
-                            return 'kr ' . number_format(((float)$state) / 100, 0) . ',-';
+                            return 'kr ' . number_format(((float) $state) / 100, 0) . ',-';
                         }
-                        // Currency symbol map for other currencies (extend as needed)
                         $currencySymbols = [
                             'USD' => '$',
                             'EUR' => '€',
                             'GBP' => '£',
                         ];
                         $symbol = $currencySymbols[$record->currency] ?? $record->currency . ' ';
-                        return $symbol . number_format(((float)$state) / 100, 2);
+                        return $symbol . number_format(((float) $state) / 100, 2);
                     }),
                 Tables\Columns\TextColumn::make('shipping_address')
                     ->label(__('crud.orders.inputs.shipping_address.label'))
@@ -129,11 +170,11 @@ class OrderResource extends Resource
                     ->limit(255),
             ])
             ->filters([
-                // You could add additional filters here if necessary.
+                // Additional filters if needed.
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
                 Tables\Actions\ViewAction::make(),
+                Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -141,6 +182,18 @@ class OrderResource extends Resource
                 ]),
             ])
             ->defaultSort('id', 'desc');
+    }
+
+    /**
+     * Override to set "view" as the default page when clicking a table row.
+     *
+     * @param \App\Models\Order $record
+     *
+     * @return string|null
+     */
+    public static function getTableRecordUrl($record): ?string
+    {
+        return static::getUrl('view', $record);
     }
 
     public static function getRelations(): array
@@ -156,6 +209,7 @@ class OrderResource extends Resource
             'index'  => Pages\ListOrders::route('/'),
             'create' => Pages\CreateOrder::route('/create'),
             'edit'   => Pages\EditOrder::route('/{record}/edit'),
+            'view'   => Pages\ViewOrder::route('/{record}'),
         ];
     }
 }

@@ -22,7 +22,6 @@ class Product extends Model implements HasMedia
         'type',
         'description',
         'price',
-        'short_description',
         'stripe_product_id',
     ];
 

@@ -5,7 +5,7 @@
                 "uuid": "a68a2907-6d21-4ca8-b55c-07dc942dae74",
                 "id": 1,
                 "createdAt": "2025-04-03 14:51:48",
-                "updatedAt": "2025-04-07 18:10:09",
+                "updatedAt": "2025-04-08 11:27:52",
                 "settings": {
                     "cssFramework": "tailwind",
                     "uiStarterKit": "other",
@@ -368,7 +368,7 @@
                 "vthemeCdn": "https://cdn.tailwindcss.com",
                 "connectionFinished": true,
                 "canIgnoreNextSchemaSourceChanges": false,
-                "lastReadSchemaDataHash": "101e2faa4d0d824fdce58fa99d2075ea",
+                "lastReadSchemaDataHash": "b6b7ccca0209ea715606ac7f515eb167",
                 "currentSchemaError": null,
                 "currentSchemaErrorStack": null,
                 "filesQueueStatus": "idle",
@@ -581,7 +581,7 @@
                 },
                 "id": 1,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": 0,
                 "positionY": 0,
                 "removed": false,
@@ -628,7 +628,9 @@
                             "models.tableId": [
                                 1
                             ],
-                            "indices.onTableId": [],
+                            "indices.onTableId": [
+                                201
+                            ],
                             "indices.tableId": []
                         }
                     },
@@ -799,17 +801,22 @@
                                 139,
                                 140,
                                 141,
-                                142,
                                 143,
                                 144,
                                 145,
                                 146,
-                                170
+                                170,
+                                205,
+                                206,
+                                207,
+                                208
                             ],
                             "models.tableId": [
                                 8
                             ],
-                            "indices.onTableId": [],
+                            "indices.onTableId": [
+                                200
+                            ],
                             "indices.tableId": [],
                             "cruds.tableId": [
                                 3
@@ -843,7 +850,9 @@
                             "models.tableId": [
                                 10
                             ],
-                            "indices.onTableId": []
+                            "indices.onTableId": [
+                                203
+                            ]
                         }
                     },
                     "22": {
@@ -861,7 +870,9 @@
                             "models.tableId": [
                                 12
                             ],
-                            "indices.onTableId": []
+                            "indices.onTableId": [
+                                202
+                            ]
                         }
                     },
                     "23": {
@@ -888,7 +899,9 @@
                                 201
                             ],
                             "indices.tableId": [
-                                172
+                                172,
+                                202,
+                                203
                             ],
                             "relationships.pivotId": [
                                 68,
@@ -905,7 +918,11 @@
                                 202,
                                 203
                             ],
-                            "indices.tableId": [],
+                            "indices.tableId": [
+                                191,
+                                200,
+                                201
+                            ],
                             "relationships.pivotId": [
                                 70,
                                 71
@@ -960,7 +977,7 @@
                 },
                 "id": 2,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": 0,
                 "positionY": 700,
                 "removed": false,
@@ -1004,7 +1021,7 @@
                 },
                 "id": 4,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "1028.25",
                 "positionY": "374.25",
                 "removed": false,
@@ -1048,7 +1065,7 @@
                 },
                 "id": 5,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": 0,
                 "positionY": -700,
                 "removed": false,
@@ -1096,7 +1113,7 @@
                 },
                 "id": 7,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": 495,
                 "positionY": 495,
                 "removed": false,
@@ -1144,7 +1161,7 @@
                 },
                 "id": 10,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": 700,
                 "positionY": 0,
                 "removed": false,
@@ -1192,7 +1209,7 @@
                 },
                 "id": 11,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": 495,
                 "positionY": -495,
                 "removed": false,
@@ -1236,7 +1253,7 @@
                 },
                 "id": 12,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "1340",
                 "positionY": "-571.429",
                 "removed": false,
@@ -1256,7 +1273,7 @@
                 },
                 "id": 13,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": 0,
                 "positionY": -700,
                 "removed": false,
@@ -1322,7 +1339,7 @@
                 },
                 "id": 14,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "1198.86",
                 "positionY": "840.571",
                 "removed": false,
@@ -1366,7 +1383,7 @@
                 },
                 "id": 15,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "651.667",
                 "positionY": "-651.667",
                 "removed": false,
@@ -1414,7 +1431,7 @@
                 },
                 "id": 16,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": -495,
                 "positionY": -495,
                 "removed": false,
@@ -1474,6 +1491,17 @@
                         "migrationName": "2025_04_07_114656_001_update_products_table",
                         "datePrefix": "2025_04_07",
                         "fullPrefix": "2025_04_07_114656",
+                        "createdTables": [],
+                        "changedTables": [
+                            "products"
+                        ]
+                    },
+                    {
+                        "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_165911_001_update_products_table.php",
+                        "relativePath": "/database/migrations/2025_04_07_165911_001_update_products_table.php",
+                        "migrationName": "2025_04_07_165911_001_update_products_table",
+                        "datePrefix": "2025_04_07",
+                        "fullPrefix": "2025_04_07_165911",
                         "createdTables": [],
                         "changedTables": [
                             "products"
@@ -1541,12 +1569,23 @@
                             "changedTables": [
                                 "products"
                             ]
+                        },
+                        {
+                            "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_165911_001_update_products_table.php",
+                            "relativePath": "/database/migrations/2025_04_07_165911_001_update_products_table.php",
+                            "migrationName": "2025_04_07_165911_001_update_products_table",
+                            "datePrefix": "2025_04_07",
+                            "fullPrefix": "2025_04_07_165911",
+                            "createdTables": [],
+                            "changedTables": [
+                                "products"
+                            ]
                         }
                     ]
                 },
                 "id": 18,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "-508.857",
                 "positionY": "-244.571",
                 "removed": false,
@@ -1594,7 +1633,7 @@
                 },
                 "id": 19,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": -700,
                 "positionY": 0,
                 "removed": false,
@@ -1638,7 +1677,7 @@
                 },
                 "id": 21,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "328.556",
                 "positionY": "622.667",
                 "removed": false,
@@ -1686,7 +1725,7 @@
                 },
                 "id": 22,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "-479",
                 "positionY": "472",
                 "removed": false,
@@ -1699,7 +1738,7 @@
                 "createdFromInterface": false,
                 "id": 23,
                 "createdAt": "2025-04-07 13:20:49",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "2157.86",
                 "positionY": "25.7143",
                 "removed": false,
@@ -1742,33 +1781,11 @@
                 "sectionId": 1,
                 "id": 31,
                 "createdAt": "2025-04-07 14:37:28",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "3",
                 "positionY": "341.231",
                 "removed": false,
                 "migrations": [
-                    {
-                        "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_03_28_152704_001_create_store_user_table.php",
-                        "relativePath": "/database/migrations/2025_03_28_152704_001_create_store_user_table.php",
-                        "migrationName": "2025_03_28_152704_001_create_store_user_table",
-                        "datePrefix": "2025_03_28",
-                        "fullPrefix": "2025_03_28_152704",
-                        "createdTables": [
-                            "store_user"
-                        ],
-                        "changedTables": []
-                    },
-                    {
-                        "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_121111_002_drop_store_user_table.php",
-                        "relativePath": "/database/migrations/2025_04_07_121111_002_drop_store_user_table.php",
-                        "migrationName": "2025_04_07_121111_002_drop_store_user_table",
-                        "datePrefix": "2025_04_07",
-                        "fullPrefix": "2025_04_07_121111",
-                        "createdTables": [
-                            "store_user"
-                        ],
-                        "changedTables": []
-                    },
                     {
                         "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_123823_001_create_store_user_table.php",
                         "relativePath": "/database/migrations/2025_04_07_123823_001_create_store_user_table.php",
@@ -1789,28 +1806,6 @@
                     "oldNames": [],
                     "migrations": [
                         {
-                            "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_03_28_152704_001_create_store_user_table.php",
-                            "relativePath": "/database/migrations/2025_03_28_152704_001_create_store_user_table.php",
-                            "migrationName": "2025_03_28_152704_001_create_store_user_table",
-                            "datePrefix": "2025_03_28",
-                            "fullPrefix": "2025_03_28_152704",
-                            "createdTables": [
-                                "store_user"
-                            ],
-                            "changedTables": []
-                        },
-                        {
-                            "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_121111_002_drop_store_user_table.php",
-                            "relativePath": "/database/migrations/2025_04_07_121111_002_drop_store_user_table.php",
-                            "migrationName": "2025_04_07_121111_002_drop_store_user_table",
-                            "datePrefix": "2025_04_07",
-                            "fullPrefix": "2025_04_07_121111",
-                            "createdTables": [
-                                "store_user"
-                            ],
-                            "changedTables": []
-                        },
-                        {
                             "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_123823_001_create_store_user_table.php",
                             "relativePath": "/database/migrations/2025_04_07_123823_001_create_store_user_table.php",
                             "migrationName": "2025_04_07_123823_001_create_store_user_table",
@@ -1830,33 +1825,11 @@
                 "sectionId": 1,
                 "id": 32,
                 "createdAt": "2025-04-07 15:07:52",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "positionX": "411.75",
                 "positionY": "43.5",
                 "removed": false,
                 "migrations": [
-                    {
-                        "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_03_28_150341_create_collection_product_table.php",
-                        "relativePath": "/database/migrations/2025_03_28_150341_create_collection_product_table.php",
-                        "migrationName": "2025_03_28_150341_create_collection_product_table",
-                        "datePrefix": "2025_03_28",
-                        "fullPrefix": "2025_03_28_150341",
-                        "createdTables": [
-                            "collection_product"
-                        ],
-                        "changedTables": []
-                    },
-                    {
-                        "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_121038_002_drop_collection_product_table.php",
-                        "relativePath": "/database/migrations/2025_04_07_121038_002_drop_collection_product_table.php",
-                        "migrationName": "2025_04_07_121038_002_drop_collection_product_table",
-                        "datePrefix": "2025_04_07",
-                        "fullPrefix": "2025_04_07_121038",
-                        "createdTables": [
-                            "collection_product"
-                        ],
-                        "changedTables": []
-                    },
                     {
                         "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_130758_001_create_collection_product_table.php",
                         "relativePath": "/database/migrations/2025_04_07_130758_001_create_collection_product_table.php",
@@ -1876,28 +1849,6 @@
                     "name": "collection_product",
                     "oldNames": [],
                     "migrations": [
-                        {
-                            "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_03_28_150341_create_collection_product_table.php",
-                            "relativePath": "/database/migrations/2025_03_28_150341_create_collection_product_table.php",
-                            "migrationName": "2025_03_28_150341_create_collection_product_table",
-                            "datePrefix": "2025_03_28",
-                            "fullPrefix": "2025_03_28_150341",
-                            "createdTables": [
-                                "collection_product"
-                            ],
-                            "changedTables": []
-                        },
-                        {
-                            "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_121038_002_drop_collection_product_table.php",
-                            "relativePath": "/database/migrations/2025_04_07_121038_002_drop_collection_product_table.php",
-                            "migrationName": "2025_04_07_121038_002_drop_collection_product_table",
-                            "datePrefix": "2025_04_07",
-                            "fullPrefix": "2025_04_07_121038",
-                            "createdTables": [
-                                "collection_product"
-                            ],
-                            "changedTables": []
-                        },
                         {
                             "migration": "/Users/jan/PhpstormProjects/Visivo-ecommerce/database/migrations/2025_04_07_130758_001_create_collection_product_table.php",
                             "relativePath": "/database/migrations/2025_04_07_130758_001_create_collection_product_table.php",
@@ -1947,11 +1898,11 @@
                 "options": [],
                 "id": 1,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "__tableData": {
-                "count": 138,
-                "lastPrimaryKey": 203,
+                "count": 141,
+                "lastPrimaryKey": 208,
                 "index": {
                     "1": {
                         "hasMany": {
@@ -1981,7 +1932,9 @@
                     },
                     "12": {
                         "hasMany": {
-                            "indices.referencesColumnId": []
+                            "indices.referencesColumnId": [
+                                201
+                            ]
                         }
                     },
                     "13": {
@@ -2428,7 +2381,9 @@
                     },
                     "134": {
                         "hasMany": {
-                            "indices.referencesColumnId": [],
+                            "indices.referencesColumnId": [
+                                200
+                            ],
                             "relationships.parentKeyId": [
                                 40
                             ]
@@ -2502,16 +2457,6 @@
                             ]
                         }
                     },
-                    "142": {
-                        "hasMany": {
-                            "fillable_model_column.columnId": [
-                                37
-                            ],
-                            "inputs.columnId": [
-                                24
-                            ]
-                        }
-                    },
                     "143": {
                         "hasMany": {}
                     },
@@ -2571,7 +2516,9 @@
                                 19,
                                 21
                             ],
-                            "indices.referencesColumnId": []
+                            "indices.referencesColumnId": [
+                                203
+                            ]
                         }
                     },
                     "157": {
@@ -2596,7 +2543,9 @@
                     },
                     "161": {
                         "hasMany": {
-                            "indices.referencesColumnId": []
+                            "indices.referencesColumnId": [
+                                202
+                            ]
                         }
                     },
                     "162": {
@@ -2677,7 +2626,8 @@
                     "199": {
                         "hasMany": {
                             "index_column.columnId": [
-                                173
+                                173,
+                                206
                             ],
                             "relationships.relatedPivotKeyId": [
                                 68
@@ -2690,7 +2640,8 @@
                     "200": {
                         "hasMany": {
                             "index_column.columnId": [
-                                174
+                                174,
+                                205
                             ],
                             "relationships.foreignPivotKeyId": [
                                 68
@@ -2705,7 +2656,10 @@
                     },
                     "202": {
                         "hasMany": {
-                            "index_column.columnId": [],
+                            "index_column.columnId": [
+                                193,
+                                204
+                            ],
                             "relationships.foreignPivotKeyId": [
                                 71
                             ],
@@ -2719,7 +2673,10 @@
                     },
                     "203": {
                         "hasMany": {
-                            "index_column.columnId": [],
+                            "index_column.columnId": [
+                                194,
+                                203
+                            ],
                             "relationships.relatedPivotKeyId": [
                                 71
                             ],
@@ -2727,6 +2684,18 @@
                                 70
                             ]
                         }
+                    },
+                    "205": {
+                        "hasMany": {}
+                    },
+                    "206": {
+                        "hasMany": {}
+                    },
+                    "207": {
+                        "hasMany": {}
+                    },
+                    "208": {
+                        "hasMany": {}
                     }
                 },
                 "additionalIndexes": {},
@@ -2766,7 +2735,7 @@
                 "options": [],
                 "id": 2,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_3": {
                 "name": "expiration",
@@ -2801,7 +2770,7 @@
                 "options": [],
                 "id": 3,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_4": {
                 "name": "key",
@@ -2836,7 +2805,7 @@
                 "options": [],
                 "id": 4,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_5": {
                 "name": "owner",
@@ -2871,7 +2840,7 @@
                 "options": [],
                 "id": 5,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_6": {
                 "name": "expiration",
@@ -2906,7 +2875,7 @@
                 "options": [],
                 "id": 6,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_12": {
                 "name": "id",
@@ -2941,7 +2910,7 @@
                 "options": [],
                 "id": 12,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_13": {
                 "name": "store_id",
@@ -2976,7 +2945,7 @@
                 "options": [],
                 "id": 13,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_14": {
                 "name": "name",
@@ -3011,7 +2980,7 @@
                 "options": [],
                 "id": 14,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_15": {
                 "name": "visible",
@@ -3046,7 +3015,7 @@
                 "options": [],
                 "id": 15,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_16": {
                 "name": "created_at",
@@ -3081,7 +3050,7 @@
                 "options": [],
                 "id": 16,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_17": {
                 "name": "updated_at",
@@ -3116,7 +3085,7 @@
                 "options": [],
                 "id": 17,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_18": {
                 "name": "id",
@@ -3151,7 +3120,7 @@
                 "options": [],
                 "id": 18,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_19": {
                 "name": "store_id",
@@ -3186,7 +3155,7 @@
                 "options": [],
                 "id": 19,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_20": {
                 "name": "name",
@@ -3221,7 +3190,7 @@
                 "options": [],
                 "id": 20,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_21": {
                 "name": "email",
@@ -3256,7 +3225,7 @@
                 "options": [],
                 "id": 21,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_22": {
                 "name": "phone",
@@ -3291,7 +3260,7 @@
                 "options": [],
                 "id": 22,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_23": {
                 "name": "billing_address",
@@ -3326,7 +3295,7 @@
                 "options": [],
                 "id": 23,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_24": {
                 "name": "shipping_address",
@@ -3361,7 +3330,7 @@
                 "options": [],
                 "id": 24,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_25": {
                 "name": "guest",
@@ -3396,7 +3365,7 @@
                 "options": [],
                 "id": 25,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_26": {
                 "name": "created_at",
@@ -3431,7 +3400,7 @@
                 "options": [],
                 "id": 26,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_27": {
                 "name": "updated_at",
@@ -3466,7 +3435,7 @@
                 "options": [],
                 "id": 27,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_31": {
                 "name": "id",
@@ -3501,7 +3470,7 @@
                 "options": [],
                 "id": 31,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_32": {
                 "name": "uuid",
@@ -3536,7 +3505,7 @@
                 "options": [],
                 "id": 32,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_33": {
                 "name": "connection",
@@ -3571,7 +3540,7 @@
                 "options": [],
                 "id": 33,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_34": {
                 "name": "queue",
@@ -3606,7 +3575,7 @@
                 "options": [],
                 "id": 34,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_35": {
                 "name": "payload",
@@ -3641,7 +3610,7 @@
                 "options": [],
                 "id": 35,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_36": {
                 "name": "exception",
@@ -3676,7 +3645,7 @@
                 "options": [],
                 "id": 36,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_37": {
                 "name": "failed_at",
@@ -3711,7 +3680,7 @@
                 "options": [],
                 "id": 37,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_53": {
                 "name": "id",
@@ -3746,7 +3715,7 @@
                 "options": [],
                 "id": 53,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_54": {
                 "name": "name",
@@ -3781,7 +3750,7 @@
                 "options": [],
                 "id": 54,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_55": {
                 "name": "total_jobs",
@@ -3816,7 +3785,7 @@
                 "options": [],
                 "id": 55,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_56": {
                 "name": "pending_jobs",
@@ -3851,7 +3820,7 @@
                 "options": [],
                 "id": 56,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_57": {
                 "name": "failed_jobs",
@@ -3886,7 +3855,7 @@
                 "options": [],
                 "id": 57,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_58": {
                 "name": "failed_job_ids",
@@ -3921,7 +3890,7 @@
                 "options": [],
                 "id": 58,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_59": {
                 "name": "options",
@@ -3956,7 +3925,7 @@
                 "options": [],
                 "id": 59,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_60": {
                 "name": "cancelled_at",
@@ -3991,7 +3960,7 @@
                 "options": [],
                 "id": 60,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_61": {
                 "name": "created_at",
@@ -4026,7 +3995,7 @@
                 "options": [],
                 "id": 61,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_62": {
                 "name": "finished_at",
@@ -4061,7 +4030,7 @@
                 "options": [],
                 "id": 62,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_63": {
                 "name": "id",
@@ -4096,7 +4065,7 @@
                 "options": [],
                 "id": 63,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_64": {
                 "name": "queue",
@@ -4131,7 +4100,7 @@
                 "options": [],
                 "id": 64,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_65": {
                 "name": "payload",
@@ -4166,7 +4135,7 @@
                 "options": [],
                 "id": 65,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_66": {
                 "name": "attempts",
@@ -4201,7 +4170,7 @@
                 "options": [],
                 "id": 66,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_67": {
                 "name": "reserved_at",
@@ -4236,7 +4205,7 @@
                 "options": [],
                 "id": 67,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_68": {
                 "name": "available_at",
@@ -4271,7 +4240,7 @@
                 "options": [],
                 "id": 68,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_69": {
                 "name": "created_at",
@@ -4306,7 +4275,7 @@
                 "options": [],
                 "id": 69,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_70": {
                 "name": "id",
@@ -4341,7 +4310,7 @@
                 "options": [],
                 "id": 70,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_71": {
                 "name": "model_type",
@@ -4376,7 +4345,7 @@
                 "options": [],
                 "id": 71,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_72": {
                 "name": "model_id",
@@ -4411,7 +4380,7 @@
                 "options": [],
                 "id": 72,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_73": {
                 "name": "uuid",
@@ -4446,7 +4415,7 @@
                 "options": [],
                 "id": 73,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_74": {
                 "name": "collection_name",
@@ -4481,7 +4450,7 @@
                 "options": [],
                 "id": 74,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_75": {
                 "name": "name",
@@ -4516,7 +4485,7 @@
                 "options": [],
                 "id": 75,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_76": {
                 "name": "file_name",
@@ -4551,7 +4520,7 @@
                 "options": [],
                 "id": 76,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_77": {
                 "name": "mime_type",
@@ -4586,7 +4555,7 @@
                 "options": [],
                 "id": 77,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_78": {
                 "name": "disk",
@@ -4621,7 +4590,7 @@
                 "options": [],
                 "id": 78,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_79": {
                 "name": "conversions_disk",
@@ -4656,7 +4625,7 @@
                 "options": [],
                 "id": 79,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_80": {
                 "name": "size",
@@ -4691,7 +4660,7 @@
                 "options": [],
                 "id": 80,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_81": {
                 "name": "manipulations",
@@ -4726,7 +4695,7 @@
                 "options": [],
                 "id": 81,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_82": {
                 "name": "custom_properties",
@@ -4761,7 +4730,7 @@
                 "options": [],
                 "id": 82,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_83": {
                 "name": "generated_conversions",
@@ -4796,7 +4765,7 @@
                 "options": [],
                 "id": 83,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_84": {
                 "name": "responsive_images",
@@ -4831,7 +4800,7 @@
                 "options": [],
                 "id": 84,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_85": {
                 "name": "order_column",
@@ -4866,7 +4835,7 @@
                 "options": [],
                 "id": 85,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_86": {
                 "name": "created_at",
@@ -4901,7 +4870,7 @@
                 "options": [],
                 "id": 86,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_87": {
                 "name": "updated_at",
@@ -4936,7 +4905,7 @@
                 "options": [],
                 "id": 87,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_88": {
                 "name": "id",
@@ -4971,7 +4940,7 @@
                 "options": [],
                 "id": 88,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_89": {
                 "name": "migration",
@@ -5006,7 +4975,7 @@
                 "options": [],
                 "id": 89,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_90": {
                 "name": "batch",
@@ -5041,7 +5010,7 @@
                 "options": [],
                 "id": 90,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_91": {
                 "name": "id",
@@ -5076,7 +5045,7 @@
                 "options": [],
                 "id": 91,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_92": {
                 "name": "order_id",
@@ -5111,7 +5080,7 @@
                 "options": [],
                 "id": 92,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_93": {
                 "name": "product_id",
@@ -5146,7 +5115,7 @@
                 "options": [],
                 "id": 93,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_94": {
                 "name": "product_variant_id",
@@ -5181,7 +5150,7 @@
                 "options": [],
                 "id": 94,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_95": {
                 "name": "quantity",
@@ -5216,7 +5185,7 @@
                 "options": [],
                 "id": 95,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_96": {
                 "name": "unit_price",
@@ -5251,7 +5220,7 @@
                 "options": [],
                 "id": 96,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_97": {
                 "name": "total_price",
@@ -5286,7 +5255,7 @@
                 "options": [],
                 "id": 97,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_98": {
                 "name": "name",
@@ -5321,7 +5290,7 @@
                 "options": [],
                 "id": 98,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_99": {
                 "name": "created_at",
@@ -5356,7 +5325,7 @@
                 "options": [],
                 "id": 99,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_100": {
                 "name": "updated_at",
@@ -5391,7 +5360,7 @@
                 "options": [],
                 "id": 100,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_101": {
                 "name": "id",
@@ -5426,7 +5395,7 @@
                 "options": [],
                 "id": 101,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_102": {
                 "name": "store_id",
@@ -5461,7 +5430,7 @@
                 "options": [],
                 "id": 102,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_103": {
                 "name": "customer_id",
@@ -5496,7 +5465,7 @@
                 "options": [],
                 "id": 103,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_104": {
                 "name": "stripe_order_id",
@@ -5531,7 +5500,7 @@
                 "options": [],
                 "id": 104,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_105": {
                 "name": "payment_intent",
@@ -5566,7 +5535,7 @@
                 "options": [],
                 "id": 105,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_106": {
                 "name": "status",
@@ -5601,7 +5570,7 @@
                 "options": [],
                 "id": 106,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_107": {
                 "name": "subtotal",
@@ -5636,7 +5605,7 @@
                 "options": [],
                 "id": 107,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_108": {
                 "name": "total_amount",
@@ -5671,7 +5640,7 @@
                 "options": [],
                 "id": 108,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_109": {
                 "name": "currency",
@@ -5706,7 +5675,7 @@
                 "options": [],
                 "id": 109,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_110": {
                 "name": "shipping_address",
@@ -5741,7 +5710,7 @@
                 "options": [],
                 "id": 110,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_111": {
                 "name": "billing_address",
@@ -5776,7 +5745,7 @@
                 "options": [],
                 "id": 111,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_112": {
                 "name": "metadata",
@@ -5811,7 +5780,7 @@
                 "options": [],
                 "id": 112,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_113": {
                 "name": "created_at",
@@ -5846,7 +5815,7 @@
                 "options": [],
                 "id": 113,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_114": {
                 "name": "updated_at",
@@ -5881,7 +5850,7 @@
                 "options": [],
                 "id": 114,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_115": {
                 "name": "email",
@@ -5916,7 +5885,7 @@
                 "options": [],
                 "id": 115,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_116": {
                 "name": "token",
@@ -5951,7 +5920,7 @@
                 "options": [],
                 "id": 116,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_117": {
                 "name": "created_at",
@@ -5986,7 +5955,7 @@
                 "options": [],
                 "id": 117,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_134": {
                 "name": "id",
@@ -6021,7 +5990,7 @@
                 "options": [],
                 "id": 134,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_135": {
                 "name": "store_id",
@@ -6050,13 +6019,13 @@
                 "default": null,
                 "autoIncrement": false,
                 "faker": "fake()->randomNumber(0)",
-                "order": 1,
+                "order": 12,
                 "total": null,
                 "places": null,
                 "options": [],
                 "id": 135,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_137": {
                 "name": "status",
@@ -6091,7 +6060,7 @@
                 "options": [],
                 "id": 137,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_138": {
                 "name": "name",
@@ -6126,7 +6095,7 @@
                 "options": [],
                 "id": 138,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_139": {
                 "name": "type",
@@ -6145,14 +6114,14 @@
                     "type": "string",
                     "index": false,
                     "unique": false,
-                    "default": null,
+                    "default": "product",
                     "total": null,
                     "places": null,
                     "options": []
                 },
                 "nullable": true,
                 "unsigned": false,
-                "default": null,
+                "default": "product",
                 "autoIncrement": false,
                 "faker": "fake()->word()",
                 "order": 4,
@@ -6161,7 +6130,7 @@
                 "options": [],
                 "id": 139,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_140": {
                 "name": "description",
@@ -6196,7 +6165,7 @@
                 "options": [],
                 "id": 140,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_141": {
                 "name": "price",
@@ -6231,42 +6200,7 @@
                 "options": [],
                 "id": 141,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
-            },
-            "item_142": {
-                "name": "short_description",
-                "type": "text",
-                "index": false,
-                "length": null,
-                "unique": false,
-                "tableId": 18,
-                "removed": false,
-                "schemaState": {
-                    "name": "short_description",
-                    "length": null,
-                    "nullable": true,
-                    "unsigned": false,
-                    "autoIncrement": false,
-                    "type": "text",
-                    "index": false,
-                    "unique": false,
-                    "default": null,
-                    "total": null,
-                    "places": null,
-                    "options": []
-                },
-                "nullable": true,
-                "unsigned": false,
-                "default": null,
-                "autoIncrement": false,
-                "faker": "fake()->text()",
-                "order": 7,
-                "total": null,
-                "places": null,
-                "options": [],
-                "id": 142,
-                "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_143": {
                 "name": "created_at",
@@ -6295,13 +6229,13 @@
                 "default": null,
                 "autoIncrement": false,
                 "faker": "fake()->dateTime()",
-                "order": 8,
+                "order": 7,
                 "total": null,
                 "places": null,
                 "options": [],
                 "id": 143,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_144": {
                 "name": "updated_at",
@@ -6330,13 +6264,13 @@
                 "default": null,
                 "autoIncrement": false,
                 "faker": "fake()->dateTime()",
-                "order": 9,
+                "order": 8,
                 "total": null,
                 "places": null,
                 "options": [],
                 "id": 144,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_145": {
                 "name": "stripe_product_id",
@@ -6365,13 +6299,13 @@
                 "default": null,
                 "autoIncrement": false,
                 "faker": "fake()->text({LENGTH})",
-                "order": 10,
+                "order": 9,
                 "total": null,
                 "places": null,
                 "options": [],
                 "id": 145,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_146": {
                 "name": "deleted_at",
@@ -6400,13 +6334,13 @@
                 "default": null,
                 "autoIncrement": false,
                 "faker": "fake()->dateTime()",
-                "order": 11,
+                "order": 10,
                 "total": null,
                 "places": null,
                 "options": [],
                 "id": 146,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_147": {
                 "name": "id",
@@ -6441,7 +6375,7 @@
                 "options": [],
                 "id": 147,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_148": {
                 "name": "user_id",
@@ -6476,7 +6410,7 @@
                 "options": [],
                 "id": 148,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_149": {
                 "name": "ip_address",
@@ -6511,7 +6445,7 @@
                 "options": [],
                 "id": 149,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_150": {
                 "name": "user_agent",
@@ -6546,7 +6480,7 @@
                 "options": [],
                 "id": 150,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_151": {
                 "name": "payload",
@@ -6581,7 +6515,7 @@
                 "options": [],
                 "id": 151,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_152": {
                 "name": "last_activity",
@@ -6616,7 +6550,7 @@
                 "options": [],
                 "id": 152,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_156": {
                 "name": "id",
@@ -6651,7 +6585,7 @@
                 "options": [],
                 "id": 156,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_157": {
                 "name": "name",
@@ -6686,7 +6620,7 @@
                 "options": [],
                 "id": 157,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_158": {
                 "name": "stripe_account_id",
@@ -6721,7 +6655,7 @@
                 "options": [],
                 "id": 158,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_159": {
                 "name": "created_at",
@@ -6756,7 +6690,7 @@
                 "options": [],
                 "id": 159,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_160": {
                 "name": "updated_at",
@@ -6791,7 +6725,7 @@
                 "options": [],
                 "id": 160,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_161": {
                 "name": "id",
@@ -6826,7 +6760,7 @@
                 "options": [],
                 "id": 161,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_162": {
                 "name": "name",
@@ -6861,7 +6795,7 @@
                 "options": [],
                 "id": 162,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_163": {
                 "name": "email",
@@ -6896,7 +6830,7 @@
                 "options": [],
                 "id": 163,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_164": {
                 "name": "email_verified_at",
@@ -6931,7 +6865,7 @@
                 "options": [],
                 "id": 164,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_165": {
                 "name": "password",
@@ -6966,7 +6900,7 @@
                 "options": [],
                 "id": 165,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_166": {
                 "name": "remember_token",
@@ -7001,7 +6935,7 @@
                 "options": [],
                 "id": 166,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_167": {
                 "name": "created_at",
@@ -7036,7 +6970,7 @@
                 "options": [],
                 "id": 167,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_168": {
                 "name": "updated_at",
@@ -7071,7 +7005,7 @@
                 "options": [],
                 "id": 168,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29"
+                "updatedAt": "2025-04-07 19:00:35"
             },
             "item_170": {
                 "name": "metadata",
@@ -7102,8 +7036,8 @@
                 "faker": "[]",
                 "id": 170,
                 "createdAt": "2025-04-07 13:20:23",
-                "updatedAt": "2025-04-07 15:44:29",
-                "order": 12,
+                "updatedAt": "2025-04-07 19:00:35",
+                "order": 11,
                 "total": null,
                 "places": null,
                 "options": []
@@ -7137,7 +7071,7 @@
                 "order": 0,
                 "id": 171,
                 "createdAt": "2025-04-07 13:20:49",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "total": null,
                 "places": null,
                 "options": []
@@ -7172,7 +7106,7 @@
                 "order": 5,
                 "id": 172,
                 "createdAt": "2025-04-07 13:20:49",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "total": null,
                 "places": null,
                 "options": []
@@ -7207,7 +7141,7 @@
                 "order": 6,
                 "id": 173,
                 "createdAt": "2025-04-07 13:20:49",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "total": null,
                 "places": null,
                 "options": []
@@ -7241,7 +7175,7 @@
                 "faker": "fake()->randomNumber()",
                 "id": 174,
                 "createdAt": "2025-04-07 13:20:55",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "order": 1,
                 "total": null,
                 "places": null,
@@ -7276,7 +7210,7 @@
                 "faker": "fake()->randomNumber()",
                 "id": 175,
                 "createdAt": "2025-04-07 13:21:23",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "order": 2,
                 "total": null,
                 "places": null,
@@ -7311,7 +7245,7 @@
                 "faker": "fake()->randomNumber()",
                 "id": 176,
                 "createdAt": "2025-04-07 13:21:32",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "order": 3,
                 "total": null,
                 "places": null,
@@ -7346,7 +7280,7 @@
                 "faker": "fake()->randomNumber()",
                 "id": 177,
                 "createdAt": "2025-04-07 13:21:53",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "order": 4,
                 "total": null,
                 "places": null,
@@ -7381,7 +7315,7 @@
                 "faker": "fake()->randomNumber(0)",
                 "id": 199,
                 "createdAt": "2025-04-07 14:37:28",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "order": 0,
                 "total": null,
                 "places": null,
@@ -7416,7 +7350,7 @@
                 "faker": "fake()->randomNumber(0)",
                 "id": 200,
                 "createdAt": "2025-04-07 14:37:28",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "order": 1,
                 "total": null,
                 "places": null,
@@ -7451,7 +7385,7 @@
                 "faker": "fake()->word()",
                 "id": 201,
                 "createdAt": "2025-04-07 14:40:52",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "order": 2,
                 "total": null,
                 "places": null,
@@ -7460,7 +7394,7 @@
             "item_202": {
                 "name": "collection_id",
                 "type": "integer",
-                "index": false,
+                "index": true,
                 "length": null,
                 "unique": false,
                 "tableId": 32,
@@ -7472,7 +7406,7 @@
                     "unsigned": false,
                     "autoIncrement": false,
                     "type": "integer",
-                    "index": false,
+                    "index": true,
                     "unique": false,
                     "default": null,
                     "total": null,
@@ -7486,7 +7420,7 @@
                 "faker": "fake()->randomNumber(0)",
                 "id": 202,
                 "createdAt": "2025-04-07 15:07:52",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "order": 0,
                 "total": null,
                 "places": null,
@@ -7495,7 +7429,7 @@
             "item_203": {
                 "name": "product_id",
                 "type": "integer",
-                "index": false,
+                "index": true,
                 "length": null,
                 "unique": false,
                 "tableId": 32,
@@ -7507,7 +7441,7 @@
                     "unsigned": false,
                     "autoIncrement": false,
                     "type": "integer",
-                    "index": false,
+                    "index": true,
                     "unique": false,
                     "default": null,
                     "total": null,
@@ -7521,11 +7455,151 @@
                 "faker": "fake()->randomNumber(0)",
                 "id": 203,
                 "createdAt": "2025-04-07 15:07:52",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "order": 1,
                 "total": null,
                 "places": null,
                 "options": []
+            },
+            "item_205": {
+                "name": "sku",
+                "type": "string",
+                "index": false,
+                "length": null,
+                "unique": false,
+                "tableId": 18,
+                "removed": false,
+                "schemaState": {
+                    "name": "sku",
+                    "length": null,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "type": "string",
+                    "index": false,
+                    "unique": false,
+                    "default": null,
+                    "total": null,
+                    "places": null,
+                    "options": []
+                },
+                "nullable": true,
+                "unsigned": false,
+                "default": null,
+                "autoIncrement": false,
+                "faker": "fake()->unique()->ean8()",
+                "id": 205,
+                "createdAt": "2025-04-07 18:55:50",
+                "updatedAt": "2025-04-07 19:00:35",
+                "order": 14,
+                "total": null,
+                "places": null,
+                "options": []
+            },
+            "item_206": {
+                "name": "slug",
+                "type": "string",
+                "index": false,
+                "length": null,
+                "unique": true,
+                "tableId": 18,
+                "removed": false,
+                "schemaState": {
+                    "name": "slug",
+                    "length": null,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "type": "string",
+                    "index": false,
+                    "unique": true,
+                    "default": null,
+                    "total": null,
+                    "places": null,
+                    "options": []
+                },
+                "nullable": true,
+                "unsigned": false,
+                "default": null,
+                "autoIncrement": false,
+                "faker": "fake()->unique->slug()",
+                "id": 206,
+                "createdAt": "2025-04-07 18:56:24",
+                "updatedAt": "2025-04-07 19:00:35",
+                "order": 15,
+                "total": null,
+                "places": null,
+                "options": []
+            },
+            "item_207": {
+                "name": "vat_percent",
+                "type": "integer",
+                "index": false,
+                "length": null,
+                "unique": false,
+                "tableId": 18,
+                "removed": false,
+                "schemaState": {
+                    "name": "vat_percent",
+                    "length": null,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "type": "integer",
+                    "index": false,
+                    "unique": false,
+                    "default": "25",
+                    "total": null,
+                    "places": null,
+                    "options": []
+                },
+                "nullable": true,
+                "unsigned": false,
+                "default": "25",
+                "autoIncrement": false,
+                "faker": "fake()->numerify('##########')",
+                "id": 207,
+                "createdAt": "2025-04-07 18:56:44",
+                "updatedAt": "2025-04-07 19:00:35",
+                "order": 13,
+                "total": null,
+                "places": null,
+                "options": []
+            },
+            "item_208": {
+                "name": "main_variant_id",
+                "type": "integer",
+                "index": false,
+                "length": null,
+                "unique": false,
+                "tableId": 18,
+                "removed": false,
+                "schemaState": {
+                    "name": "main_variant_id",
+                    "length": null,
+                    "nullable": true,
+                    "unsigned": false,
+                    "autoIncrement": false,
+                    "type": "integer",
+                    "index": false,
+                    "unique": false,
+                    "default": null,
+                    "total": null,
+                    "places": null,
+                    "options": []
+                },
+                "nullable": true,
+                "unsigned": false,
+                "default": null,
+                "autoIncrement": false,
+                "faker": "fake()->randomNumber(0)",
+                "order": 1,
+                "total": null,
+                "places": null,
+                "options": [],
+                "id": 208,
+                "createdAt": "2025-04-07 19:00:25",
+                "updatedAt": "2025-04-07 19:00:35"
             }
         },
         "indices": {
@@ -7555,12 +7629,12 @@
                 },
                 "id": 1,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false
             },
             "__tableData": {
-                "count": 7,
-                "lastPrimaryKey": 190,
+                "count": 12,
+                "lastPrimaryKey": 203,
                 "index": {
                     "1": {
                         "hasMany": {
@@ -7612,6 +7686,42 @@
                                 174
                             ]
                         }
+                    },
+                    "191": {
+                        "hasMany": {
+                            "index_column.indexId": [
+                                193,
+                                194
+                            ]
+                        }
+                    },
+                    "200": {
+                        "hasMany": {
+                            "index_column.indexId": [
+                                203
+                            ]
+                        }
+                    },
+                    "201": {
+                        "hasMany": {
+                            "index_column.indexId": [
+                                204
+                            ]
+                        }
+                    },
+                    "202": {
+                        "hasMany": {
+                            "index_column.indexId": [
+                                205
+                            ]
+                        }
+                    },
+                    "203": {
+                        "hasMany": {
+                            "index_column.indexId": [
+                                206
+                            ]
+                        }
                     }
                 },
                 "additionalIndexes": {},
@@ -7644,7 +7754,7 @@
                 },
                 "id": 2,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false
             },
             "item_3": {
@@ -7673,7 +7783,7 @@
                 },
                 "id": 3,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false
             },
             "item_4": {
@@ -7704,7 +7814,7 @@
                 },
                 "id": 4,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false
             },
             "item_5": {
@@ -7733,7 +7843,7 @@
                 },
                 "id": 5,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false
             },
             "item_6": {
@@ -7762,7 +7872,7 @@
                 },
                 "id": 6,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false
             },
             "item_172": {
@@ -7793,8 +7903,107 @@
                 },
                 "id": 172,
                 "createdAt": "2025-04-07 14:45:30",
-                "updatedAt": "2025-04-07 15:44:29",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false
+            },
+            "item_191": {
+                "tableId": 32,
+                "name": "",
+                "columns": [
+                    "collection_id",
+                    "product_id"
+                ],
+                "algorithm": null,
+                "type": "primary",
+                "on": null,
+                "references": null,
+                "onUpdate": null,
+                "onDelete": null,
+                "schemaState": {
+                    "name": "",
+                    "columns": [
+                        "collection_id",
+                        "product_id"
+                    ],
+                    "algorithm": null,
+                    "type": "primary",
+                    "on": null,
+                    "references": null,
+                    "onUpdate": null,
+                    "onDelete": null
+                },
+                "id": 191,
+                "createdAt": "2025-04-07 18:19:30",
+                "updatedAt": "2025-04-07 19:00:35",
+                "removed": false
+            },
+            "item_200": {
+                "tableId": 32,
+                "name": "collection_product_product_id_foreign",
+                "columns": [
+                    "product_id"
+                ],
+                "type": "foreign",
+                "on": "products",
+                "onTableId": 18,
+                "references": "id",
+                "referencesColumnId": 134,
+                "onUpdate": "cascade",
+                "onDelete": "cascade",
+                "id": 200,
+                "createdAt": "2025-04-07 19:00:35",
+                "updatedAt": "2025-04-07 19:00:35"
+            },
+            "item_201": {
+                "tableId": 32,
+                "name": "collection_product_collection_id_foreign",
+                "columns": [
+                    "collection_id"
+                ],
+                "type": "foreign",
+                "on": "collections",
+                "onTableId": 4,
+                "references": "id",
+                "referencesColumnId": 12,
+                "onUpdate": "cascade",
+                "onDelete": "cascade",
+                "id": 201,
+                "createdAt": "2025-04-07 19:00:35",
+                "updatedAt": "2025-04-07 19:00:35"
+            },
+            "item_202": {
+                "tableId": 31,
+                "name": "store_user_user_id_foreign",
+                "columns": [
+                    "user_id"
+                ],
+                "type": "foreign",
+                "on": "users",
+                "onTableId": 22,
+                "references": "id",
+                "referencesColumnId": 161,
+                "onUpdate": "cascade",
+                "onDelete": "cascade",
+                "id": 202,
+                "createdAt": "2025-04-07 19:00:35",
+                "updatedAt": "2025-04-07 19:00:35"
+            },
+            "item_203": {
+                "tableId": 31,
+                "name": "store_user_store_id_foreign",
+                "columns": [
+                    "store_id"
+                ],
+                "type": "foreign",
+                "on": "stores",
+                "onTableId": 21,
+                "references": "id",
+                "referencesColumnId": 156,
+                "onUpdate": "cascade",
+                "onDelete": "cascade",
+                "id": 203,
+                "createdAt": "2025-04-07 19:00:35",
+                "updatedAt": "2025-04-07 19:00:35"
             }
         },
         "index_column": {
@@ -7806,8 +8015,8 @@
                 "updatedAt": "2025-04-03 14:51:50"
             },
             "__tableData": {
-                "count": 9,
-                "lastPrimaryKey": 192,
+                "count": 15,
+                "lastPrimaryKey": 206,
                 "index": {
                     "1": {
                         "hasMany": {}
@@ -7834,6 +8043,24 @@
                         "hasMany": {}
                     },
                     "174": {
+                        "hasMany": {}
+                    },
+                    "193": {
+                        "hasMany": {}
+                    },
+                    "194": {
+                        "hasMany": {}
+                    },
+                    "203": {
+                        "hasMany": {}
+                    },
+                    "204": {
+                        "hasMany": {}
+                    },
+                    "205": {
+                        "hasMany": {}
+                    },
+                    "206": {
                         "hasMany": {}
                     }
                 },
@@ -7896,6 +8123,48 @@
                 "id": 174,
                 "createdAt": "2025-04-07 14:45:30",
                 "updatedAt": "2025-04-07 14:45:30"
+            },
+            "item_193": {
+                "indexId": 191,
+                "columnId": 202,
+                "id": 193,
+                "createdAt": "2025-04-07 18:19:30",
+                "updatedAt": "2025-04-07 18:19:30"
+            },
+            "item_194": {
+                "indexId": 191,
+                "columnId": 203,
+                "id": 194,
+                "createdAt": "2025-04-07 18:19:30",
+                "updatedAt": "2025-04-07 18:19:30"
+            },
+            "item_203": {
+                "indexId": 200,
+                "columnId": 203,
+                "id": 203,
+                "createdAt": "2025-04-07 19:00:35",
+                "updatedAt": "2025-04-07 19:00:35"
+            },
+            "item_204": {
+                "indexId": 201,
+                "columnId": 202,
+                "id": 204,
+                "createdAt": "2025-04-07 19:00:35",
+                "updatedAt": "2025-04-07 19:00:35"
+            },
+            "item_205": {
+                "indexId": 202,
+                "columnId": 200,
+                "id": 205,
+                "createdAt": "2025-04-07 19:00:35",
+                "updatedAt": "2025-04-07 19:00:35"
+            },
+            "item_206": {
+                "indexId": 203,
+                "columnId": 199,
+                "id": 206,
+                "createdAt": "2025-04-07 19:00:35",
+                "updatedAt": "2025-04-07 19:00:35"
             }
         },
         "models": {
@@ -7972,7 +8241,7 @@
                 },
                 "id": 1,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "plural": "Collections",
                 "pluralAndSingularAreSame": false,
                 "tableId": 4,
@@ -7985,7 +8254,7 @@
             },
             "__tableData": {
                 "count": 9,
-                "lastPrimaryKey": 76,
+                "lastPrimaryKey": 79,
                 "index": {
                     "1": {
                         "hasMany": {
@@ -8084,7 +8353,6 @@
                                 34,
                                 35,
                                 36,
-                                37,
                                 38
                             ],
                             "relationships.modelId": [
@@ -8229,7 +8497,7 @@
                 },
                 "id": 3,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "plural": "Customers",
                 "pluralAndSingularAreSame": false,
                 "tableId": 5,
@@ -8334,7 +8602,7 @@
                 },
                 "id": 6,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "plural": "Orders",
                 "pluralAndSingularAreSame": false,
                 "tableId": 15,
@@ -8421,7 +8689,7 @@
                 },
                 "id": 7,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "plural": "OrderItems",
                 "pluralAndSingularAreSame": false,
                 "tableId": 14,
@@ -8447,7 +8715,6 @@
                     "type",
                     "description",
                     "price",
-                    "short_description",
                     "stripe_product_id"
                 ],
                 "guarded": [
@@ -8504,7 +8771,6 @@
                         "type",
                         "description",
                         "price",
-                        "short_description",
                         "stripe_product_id"
                     ],
                     "guarded": [
@@ -8548,7 +8814,7 @@
                 },
                 "id": 8,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "plural": "Products",
                 "pluralAndSingularAreSame": false,
                 "tableId": 18,
@@ -8632,7 +8898,7 @@
                 },
                 "id": 10,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "plural": "Stores",
                 "pluralAndSingularAreSame": false,
                 "tableId": 21,
@@ -8778,7 +9044,7 @@
                 },
                 "id": 12,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "plural": "Users",
                 "pluralAndSingularAreSame": false,
                 "tableId": 22,
@@ -8823,7 +9089,7 @@
                 "appends": [],
                 "id": 26,
                 "createdAt": "2025-04-07 13:20:49",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "hooksWhenSchemaWasRead": {},
                 "removed": false,
                 "tableName": "stock",
@@ -8916,7 +9182,7 @@
                 },
                 "id": 72,
                 "createdAt": "2025-04-07 14:47:57",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "plural": "StoreUsers",
                 "pluralAndSingularAreSame": false,
                 "tableId": 31,
@@ -8936,7 +9202,7 @@
                 "updatedAt": "2025-04-03 14:51:50"
             },
             "__tableData": {
-                "count": 39,
+                "count": 38,
                 "lastPrimaryKey": 58,
                 "index": {
                     "1": {
@@ -9033,9 +9299,6 @@
                         "hasMany": {}
                     },
                     "36": {
-                        "hasMany": {}
-                    },
-                    "37": {
                         "hasMany": {}
                     },
                     "38": {
@@ -9278,13 +9541,6 @@
                 "createdAt": "2025-04-03 14:51:50",
                 "updatedAt": "2025-04-03 14:51:50"
             },
-            "item_37": {
-                "modelId": 8,
-                "columnId": 142,
-                "id": 37,
-                "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-03 14:51:50"
-            },
             "item_38": {
                 "modelId": 8,
                 "columnId": 145,
@@ -9373,7 +9629,7 @@
                 },
                 "id": 1,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "relatedModelId": 10,
                 "parentKeyId": 156,
                 "foreignKeyId": 13,
@@ -9540,7 +9796,7 @@
                 },
                 "id": 5,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "relatedModelId": 10,
                 "parentKeyId": 156,
                 "foreignKeyId": 19,
@@ -9590,7 +9846,7 @@
                 },
                 "id": 6,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "relatedModelId": 6,
                 "parentKeyId": 18,
                 "foreignKeyId": 103,
@@ -9641,7 +9897,7 @@
                 },
                 "id": 10,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false,
                 "relatedModelId": 10,
                 "parentKeyId": 156,
@@ -9691,7 +9947,7 @@
                 },
                 "id": 11,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "relatedModelId": 3,
                 "parentKeyId": 18,
                 "foreignKeyId": 103,
@@ -9742,7 +9998,7 @@
                 },
                 "id": 12,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false,
                 "relatedModelId": 7,
                 "parentKeyId": 101,
@@ -9793,7 +10049,7 @@
                 },
                 "id": 13,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "relatedModelId": 6,
                 "parentKeyId": 101,
                 "foreignKeyId": 92,
@@ -9844,7 +10100,7 @@
                 },
                 "id": 14,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false,
                 "relatedModelId": 10,
                 "parentKeyId": 156,
@@ -9897,7 +10153,7 @@
                 },
                 "id": 19,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "relatedModelId": 8,
                 "parentKeyId": 156,
                 "foreignKeyId": 135,
@@ -9948,7 +10204,7 @@
                 },
                 "id": 21,
                 "createdAt": "2025-04-03 14:51:50",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "relatedModelId": 1,
                 "parentKeyId": 156,
                 "foreignKeyId": 13,
@@ -9969,7 +10225,7 @@
                 "foreignKeyId": 93,
                 "id": 40,
                 "createdAt": "2025-04-07 13:13:22",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "removed": false,
                 "relatedTableName": "products",
                 "relatedModelName": "App\\Models\\Product",
@@ -10056,7 +10312,7 @@
                 },
                 "id": 68,
                 "createdAt": "2025-04-07 14:37:28",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "relatedModelId": 10,
                 "pivotId": 31,
                 "foreignPivotKeyId": 200,
@@ -10081,7 +10337,7 @@
                 "pivotTableName": "store_user",
                 "id": 69,
                 "createdAt": "2025-04-07 14:38:18",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "inverseId": 68,
                 "removed": false,
                 "projectId": 1,
@@ -10138,7 +10394,7 @@
                 "pivotId": 32,
                 "id": 70,
                 "createdAt": "2025-04-07 15:07:52",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "foreignPivotKeyId": 203,
                 "relatedPivotKeyId": 202,
                 "inverseId": 71,
@@ -10193,7 +10449,7 @@
                 "pivotTableName": "collection_product",
                 "id": 71,
                 "createdAt": "2025-04-07 15:07:52",
-                "updatedAt": "2025-04-07 15:09:35",
+                "updatedAt": "2025-04-07 19:00:35",
                 "inverseId": 70,
                 "removed": false,
                 "projectId": 1,
@@ -10405,13 +10661,13 @@
         "schema_sections": {
             "item_1": {
                 "name": "App",
-                "scrollX": 24369,
-                "scrollY": 24565,
-                "zoom": 80,
+                "scrollX": 24716,
+                "scrollY": 24669,
+                "zoom": 110,
                 "projectId": 1,
                 "id": 1,
                 "createdAt": "2025-04-03 14:52:02",
-                "updatedAt": "2025-04-07 15:46:22"
+                "updatedAt": "2025-04-07 20:03:12"
             },
             "__tableData": {
                 "count": 2,
@@ -10514,7 +10770,6 @@
                                 21,
                                 22,
                                 23,
-                                24,
                                 25,
                                 26,
                                 27
@@ -10633,7 +10888,6 @@
                                 21,
                                 22,
                                 23,
-                                24,
                                 25,
                                 26,
                                 27
@@ -10671,7 +10925,7 @@
         },
         "inputs": {
             "__tableData": {
-                "count": 11,
+                "count": 10,
                 "lastPrimaryKey": 28,
                 "index": {
                     "18": {
@@ -10690,9 +10944,6 @@
                         "hasMany": {}
                     },
                     "23": {
-                        "hasMany": {}
-                    },
-                    "24": {
                         "hasMany": {}
                     },
                     "25": {
@@ -11053,70 +11304,6 @@
                 },
                 "panelId": 3,
                 "id": 23,
-                "createdAt": "2025-04-07 15:08:49",
-                "updatedAt": "2025-04-07 15:08:49"
-            },
-            "item_24": {
-                "crudId": 3,
-                "columnId": 142,
-                "name": "short_description",
-                "label": "crud.products.inputs.short_description.label",
-                "placeholder": "crud.products.inputs.short_description.placeholder",
-                "readOnly": false,
-                "required": false,
-                "hidden": false,
-                "defaultValue": "",
-                "checked": false,
-                "max": 0,
-                "min": 0,
-                "step": 0,
-                "items": [],
-                "showOnCreation": true,
-                "showOnUpdate": true,
-                "showOnDetails": true,
-                "showOnIndex": true,
-                "type": "textarea",
-                "creationRules": [
-                    {
-                        "type": "textual",
-                        "value": "nullable"
-                    },
-                    {
-                        "type": "textual",
-                        "value": "string"
-                    }
-                ],
-                "updateRules": [
-                    {
-                        "type": "textual",
-                        "value": "nullable"
-                    },
-                    {
-                        "type": "textual",
-                        "value": "string"
-                    }
-                ],
-                "filamentSettings": {
-                    "formData": {
-                        "inputType": "rich-editor",
-                        "helperText": "crud.products.filament.short_description.helper_text",
-                        "toolbarButtons": null,
-                        "disableToolbarButtons": null,
-                        "disk": null,
-                        "directory": null,
-                        "visibility": "public",
-                        "rows": null,
-                        "cols": null,
-                        "autosize": false,
-                        "exactLength": null
-                    },
-                    "columnData": {
-                        "columnType": "text-column",
-                        "label": "crud.products.filament.short_description.label"
-                    }
-                },
-                "panelId": 3,
-                "id": 24,
                 "createdAt": "2025-04-07 15:08:49",
                 "updatedAt": "2025-04-07 15:08:49"
             },

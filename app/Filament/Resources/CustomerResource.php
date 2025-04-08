@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\CustomerResource\Pages;
 use App\Filament\Resources\CustomerResource\RelationManagers;
 use App\Models\Customer;
+use Filament\Facades\Filament;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -32,9 +33,8 @@ class CustomerResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('store_id')
-                    ->relationship('store', 'name')
-                    ->required(),
+                Forms\Components\Hidden::make('store_id')
+                    ->default(fn () => optional(Filament::getTenant())->id),
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
@@ -56,9 +56,7 @@ class CustomerResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('store.name')
-                    ->numeric()
-                    ->sortable(),
+
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')

@@ -24,9 +24,9 @@ class CreateStripeOrdersTable extends Migration
             $table->unsignedInteger('subtotal')->nullable(); // Add subtotal column
             $table->unsignedInteger('total_amount'); // in cents
             $table->string('currency', 3);
-            $table->json('shipping_address')->nullable();
-            $table->json('billing_address')->nullable();
-            $table->json('metadata')->nullable();
+            $table->jsonb('shipping_address')->nullable();
+            $table->jsonb('billing_address')->nullable();
+            $table->jsonb('metadata')->nullable();
 
             $table->timestamps();
 

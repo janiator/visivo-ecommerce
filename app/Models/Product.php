@@ -1,13 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use App\Models\ProductVariant;
-use Spatie\MediaLibrary\HasMedia;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Collection;
+use App\Models\Store;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Product extends Model implements HasMedia
 {
@@ -15,6 +20,11 @@ class Product extends Model implements HasMedia
     use SoftDeletes;
     use InteractsWithMedia;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
         'store_id',
         'status',
@@ -22,29 +32,66 @@ class Product extends Model implements HasMedia
         'type',
         'description',
         'price',
-        'short_description',
         'stripe_product_id',
     ];
 
-    public function store()
+    protected $casts = [
+        'metadata' => 'array',
+    ];
+
+    /**
+     * Get the store that owns the product.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\App\Models\Store, \App\Models\Product>
+     */
+    public function store(): BelongsTo
     {
         return $this->belongsTo(Store::class);
     }
 
-    public function collections()
+    /**
+     * The collections that this product belongs to.
+     *
+     * Note:
+     * Uses the default pivot table name "collection_product" with "product_id"
+     * and "collection_id" as foreign keys. If your pivot table uses different names,
+     * specify them explicitly in the belongsToMany() method.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\App\Models\Collection>
+     */
+    public function collections(): BelongsToMany
     {
-        return $this->belongsToMany(Collection::class);
+        return $this->belongsToMany(
+            Collection::class,
+            'collection_product',
+            'product_id',
+            'collection_id'
+        );
     }
 
+    /**
+     * Registers the media collections used by the product.
+     *
+     * The "main_images" collection is set to allow only a single file, while
+     * the "gallery_images" collection supports multiple files.
+     *
+     * @return void
+     */
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('main_images')->singleFile();
-
         $this->addMediaCollection('gallery_images');
     }
 
+    /**
+     * The "booted" method of the model.
+     *
+     * Hook into the model's booting process here if additional logic is required.
+     *
+     * @return void
+     */
     protected static function booted(): void
     {
-        //
+        // Additional boot logic.
     }
 }

@@ -20,6 +20,7 @@ class User extends Authenticatable implements FilamentUser, HasTenants
     use HasFactory;
     use Notifiable;
 
+
     /**
      * The attributes that are mass assignable.
      *

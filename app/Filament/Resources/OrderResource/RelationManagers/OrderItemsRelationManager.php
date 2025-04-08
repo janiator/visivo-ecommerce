@@ -21,6 +21,8 @@ class OrderItemsRelationManager extends RelationManager
 
     protected static ?string $recordTitleAttribute = 'name';
 
+    // Set your custom table label here.
+    protected static ?string $title = 'Ordrelinjer';
 
 
     public function form(Form $form): Form
@@ -79,21 +81,13 @@ class OrderItemsRelationManager extends RelationManager
                 TextColumn::make('product.name'),
 
 
-                TextColumn::make('quantity')->label(
-                    __('crud.orderItems.inputs.quantity.label')
-                ),
+                TextColumn::make('quantity')->label('Antall'),
 
-                TextColumn::make('unit_price')->label(
-                    __('crud.orderItems.inputs.unit_price.label')
-                ),
+                TextColumn::make('unit_price')->label('Enhetspris'),
 
-                TextColumn::make('total_price')->label(
-                    __('crud.orderItems.inputs.total_price.label')
-                ),
+                TextColumn::make('total_price')->label('Pris'),
 
-                TextColumn::make('name')->label(
-                    __('crud.orderItems.inputs.name.label')
-                ),
+                TextColumn::make('name')->label('Stripe ID'),
 
 
             ])

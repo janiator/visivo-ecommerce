@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Panel;
 
+use Filament\Facades\Filament;
 use Filament\Forms;
 use Filament\Tables;
 use Livewire\Component;
@@ -57,13 +58,8 @@ class CollectionResource extends Resource
         return $form->schema([
             Section::make()->schema([
                 Grid::make(['default' => 1])->schema([
-                    Select::make('store_id')
-                        ->label('Store')
-                        ->required()
-                        ->relationship('store', 'name')
-                        ->searchable()
-                        ->preload()
-                        ->native(false),
+                    Forms\Components\Hidden::make('store_id')
+                        ->default(fn () => optional(Filament::getTenant())->id),
 
                     TextInput::make('name')
                         ->label(__('crud.collections.inputs.name.label'))
