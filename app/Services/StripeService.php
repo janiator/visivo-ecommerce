@@ -13,6 +13,9 @@ use Stripe\Exception\ApiErrorException;
  * Provides methods to interact with Stripe API, including operations
  * that use Stripe Connect (e.g., creating charges, transfers, and payouts).
  */
+
+//TODO add VatCalculator https://github.com/driesvints/vat-calculator
+//TODO consider vouchers https://github.com/beyondcode/laravel-vouchers
 class StripeService
 {
     protected StripeClient $stripeClient;

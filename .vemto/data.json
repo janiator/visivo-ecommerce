@@ -10501,13 +10501,13 @@
         "schema_sections": {
             "item_1": {
                 "name": "App",
-                "scrollX": 24408,
-                "scrollY": 24560,
-                "zoom": 100,
+                "scrollX": 24052,
+                "scrollY": 24484,
+                "zoom": 170,
                 "projectId": 1,
                 "id": 1,
                 "createdAt": "2025-04-03 14:52:02",
-                "updatedAt": "2025-04-08 13:53:06"
+                "updatedAt": "2025-04-09 18:47:43"
             },
             "__tableData": {
                 "count": 2,
